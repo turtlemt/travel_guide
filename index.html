@@ -1,319 +1,348 @@
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-family: Arial, sans-serif;
-    }
-    th, td {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: left;
-        vertical-align: top;
-    }
-    th {
-        background-color: #f2f2f2;
-        font-weight: bold;
-        width: 15%;
-    }
-    .date-column {
-        width: 15%;
-        text-align: center;
-        white-space: nowrap;
-    }
-    /* 潛水日期的高亮顏色 */
-    .diving-day {
-        background-color: #ffe89f; /* 亮黃色 */
-        font-weight: bold;
-    }
-    .itinerary-column {
-        width: 70%;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳洲露營車之旅行程表 (2026)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            width: 15%;
+            color: #555;
+        }
+        .date-column {
+            width: 15%;
+            text-align: center;
+            white-space: nowrap;
+            font-size: 0.9em;
+        }
+        /* 潛水日期的高亮顏色 */
+        .diving-day {
+            background-color: #ffe89f; /* 亮黃色 */
+            font-weight: bold;
+        }
+        .itinerary-column {
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
 
-<table>
-    <thead>
-        <tr>
-            <th class="date-column">日期/天數</th>
-            <th class="itinerary-column">行程</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-16<br>Day1 [cite: 1]
-            </td>
-            <td>
-                [cite_start]酷航 TR 897 TPE->SIN 0145-0645 轉機3:55 [cite: 1]<br>
-                [cite_start]酷航 TR 24 SIN->MEL 1020-2050 [cite: 1]<br>
-                [cite_start]台灣帶些糧食吃，新加坡轉機早餐，隔天墨爾本早餐。機上花錢點餐跟自己帶點心 [cite: 1]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-17<br>Day2 [cite: 1]
-            </td>
-            <td>
-                [cite_start]Jetstar JQ 699 0600-0715 MEL-HBA $1500 [cite: 1]<br>
-                [cite_start]機場櫃檯租車 (問門票/還車時間) Devil Finder from Tasmania Campers [cite: 1]<br>
-                [cite_start]0900 路上餐廳Geilston Bay Fish Shop早餐，Bonorong Wildlife Sanctuary逛保護區 [cite: 1]<br>
-                [cite_start]1300 隔壁IGA買熟食午餐，順便採買晚餐與隔日早午餐 [cite: 1]<br>
-                [cite_start]15:00-16:00 至 Triabunna Cabin & Caravan Park [cite: 1]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-18<br>Day3 [cite: 1]
-            </td>
-            <td>
-                [cite_start]8:30 攜帶午餐搭船至 Maria Island [cite: 1]<br>
-                [cite_start]野生袋熊、地質奇觀 [cite: 1]<br>
-                [cite_start]14:30 搭船回程 [cite: 1]<br>
-                [cite_start]住宿旁邊有 IGA，買晚/早午餐 [cite: 1]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-19<br>Day4 [cite: 1]
-            </td>
-            <td>
-                [cite_start]早起開車至酒杯灣 0800-0930 [cite: 1]<br>
-                [cite_start]0930-1130 酒杯灣來回與空拍 (Wineglass Bay Lookout) [cite: 1]<br>
-                [cite_start]停車場午餐 1.5 小時 [cite: 1]<br>
-                [cite_start]1300-1600 開車至 Sheffield 壁畫小鎮 [cite: 1]<br>
-                [cite_start]鎮上有 IGA 可以補貨，一個人採買一個人帶小孩周邊壁畫拍照，要有熱湯晚/隔天早/午餐 [cite: 1]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-20<br>Day5 [cite: 1]
-            </td>
-            <td>
-                [cite_start]開車 0.5 小時至 Gowrie Park Wilderness Village 辦理入住 [cite: 1]<br>
-                [cite_start]再至 Lake Gairdner 看鴨嘴獸 (日出與日落前後一小時最佳 0530-0730/1930-2030) [cite: 1]<br>
-                [cite_start]開車半小時至 Cradle Mountain, Tasmania 停車，接駁車 0800-1800 營運 [cite: 1]<br>
-                [cite_start]亦須趕在 0800 入園等第一班接駁車，中途站 Ronny Creek 下車先走袋熊步道 [cite: 1]<br>
-                [cite_start]走上 Dove Lake，逛完之後搭接駁車下山 [cite: 1]<br>
-                [cite_start]1530 前離開，開車 1.5 小時採買晚餐/早午/墨爾本晚餐泡麵 [cite: 1]<br>
-                [cite_start]至 Penguin Caravan Park 先確認營位及晚餐 [cite: 1]<br>
-                [cite_start]Burnie 看企鵝 [cite: 1]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-21<br>Day6 [cite: 1]
-            </td>
-            <td>
-                [cite_start]0830 出發 1130 至里奇蒙橋，停車場可以簡單午餐 [cite: 1]<br>
-                [cite_start]1230-1300 開至機場還車 [cite: 1]<br>
-                [cite_start]JQ 706 HBA-MEL 1545-1710 [cite: 1]<br>
-                [cite_start]晚上機場附近住宿，免費接駁 [cite: 1]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-22<br>Day7 [cite: 2]
-            </td>
-            <td>
-                [cite_start]0800 搭 Uber 至 Apollo 租車 [cite: 2]<br>
-                [cite_start]1000 開車至市區觀光，在 Ron Barassi Snr Park 附近找停車位 (免費 3 小時停車) [cite: 2]<br>
-                [cite_start]Waterfront City/Docklands Dr #D11 搭乘免費電車 [cite: 2]<br>
-                [cite_start]Flagstaff Station/La Trobe St #3 逛維多利亞市場吃午餐 [cite: 2]<br>
-                [cite_start]回去換車位 [cite: 2]<br>
-                [cite_start]State Library stations/La Trobe St #6 圖書館 [cite: 2]<br>
-                [cite_start]Spring St/Flinders St #8 Cooks' Cottage 庫克船長小屋 [cite: 2]<br>
-                [cite_start]旁邊轉角大教堂區 [cite: 2]<br>
-                [cite_start]Hosier Ln 塗鴉大街，聖保羅教堂 (建於 1892 年的哥德式建築，銅像是第一位環澳航行的 Matthew Flinders) [cite: 2]<br>
-                [cite_start]1600 離開，1600-1640 開至營地，確認營位後採買 [cite: 2]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-23<br>Day8 [cite: 2]
-            </td>
-            <td>
-                [cite_start]0600 離開營地 [cite: 2]<br>
-                [cite_start]0700 抵達 Polperro Dolphin Swims 0800 開船，11 點返航 [cite: 2]<br>
-                [cite_start]中午採買 [cite: 2]<br>
-                [cite_start]下午 Bayplay Adventure Tours 看草海龍 (若在 TA 已經看到企鵝則以下行程不跑住一樣地方好好休息) [cite: 2]<br>
-                [cite_start]下午抵達營地 NRMA Phillip Island Beachfront Holiday Park [cite: 2]<br>
-                [cite_start]飛利浦島企鵝觀賞 2000 報到 (需預訂) [cite: 2]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-24<br>Day9 [cite: 2]
-            </td>
-            <td>
-                [cite_start]早上離開飛利浦島，開車 3.5 小時抵達無尾熊島 Raymon Island [cite: 2]<br>
-                [cite_start]先去採買及午餐還有確認營地 [cite: 2]<br>
-                [cite_start]下午免費渡輪登島散步，最好 2 點多上島 [cite: 2]<br>
-                [cite_start]天氣陰涼或天黑前有機會見到針鼴，上島前注意回程船班 [cite: 2]<br>
-                [cite_start]住無尾熊島附近營地 [cite: 2]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-25<br>Day10 [cite: 2]
-            </td>
-            <td>
-                [cite_start]0800-0900 開車至 Lakes Entrance Rotunda [cite: 2]<br>
-                [cite_start]0900-1100 步道步行半小時至出海口看海豹 [cite: 2]<br>
-                [cite_start]旁邊的 Woolworths Lakes Entrance 採買晚/早午餐 [cite: 2]<br>
-                [cite_start]1200-1300 開車至 Seat by the Snowy river 午餐，旁邊有公廁 [cite: 2]<br>
-                [cite_start]1400-1600 開車至營地入住，辦完手續再至 Bombala Platypus Reserve 看鴨嘴獸 [cite: 2]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-26<br>Day11 [cite: 2]
-            </td>
-            <td>
-                [cite_start]0600-0830 出至 Tidbinbilla Nature Reserve [cite: 2]<br>
-                [cite_start]入園先問想看動物的資訊，趁早看 [cite: 2]<br>
-                [cite_start]車停在 Eucalypt Forest Carpark，走去 Tidbinbilla Sanctuary 看看 [cite: 2]<br>
-                [cite_start]接著開車去 Paddys River，草皮上有大量袋鼠，順便野餐 [cite: 2]<br>
-                [cite_start]最後可至 Gibraltar Peak Hike 散步 [cite: 2]<br>
-                [cite_start]下午至市區採買，去營地 [cite: 2]<br>
-                [cite_start]以下兩個園區皆不用門票挑一個逛：Tidbinbilla Nature Reserve 植物園 (停車 3.8/小時)，National Museum of Australia (停車 4/小時) [cite: 2]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-27<br>Day12 [cite: 2]
-            </td>
-            <td>
-                [cite_start]1200-1230 開車至 Anderson VC Rest Area 湖邊的休息站午餐 [cite: 2]<br>
-                [cite_start]1300-1530 開至 Kiama LighthouseBulli，岬角上的美麗燈塔，岬角前方有一個海潮噴口 [cite: 2]<br>
-                [cite_start]1630-1730 Beach Tourist Park 先入住後再去採買及晚餐 [cite: 2]<br>
-                [cite_start]傍晚前至 Rube Hargrave Park 停車，拍攝 Sea Cliff Bridge [cite: 2]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-28<br>Day13 [cite: 3]
-            </td>
-            <td>
-                [cite_start]0730-0800 開車至 Crystal Street car park 停車 [cite: 3]<br>
-                [cite_start]搭火車至雪梨市中心 Petersham 站 - Town Hall 站 [cite: 3]<br>
-                [cite_start]0900-1100 依序逛市政廳、逛海德公園、聖母主教座堂 [cite: 3]<br>
-                [cite_start]中午附近吃午餐，或自帶午餐公園解決 [cite: 3]<br>
-                [cite_start]1200 走路 20 分鐘至環形碼頭，搭乘 F6 Mosman Bay 路線至 Cremorne Point Wharf 遠眺歌劇院 [cite: 3]<br>
-                [cite_start]1400 開始回程，走到 Wynyard 站搭車回到 Petersham 站 [cite: 3]<br>
-                [cite_start]開車 1 小時至 Wanderest Travellers Park 入住，再去採買 [cite: 3]
-            </td>
-        </tr>
-        <tr style="background-color: #ffe89f;">
-            <td class="date-column diving-day">
-                [cite_start]2026-01-29<br>Day14 [cite: 3]
-            </td>
-            <td>
-                [cite_start]0800-0900 開車至 Calmsley Hill City Farm 農場秀 [cite: 3]<br>
-                [cite_start]媽媽陪玩爸爸休息 [cite: 3]<br>
-                [cite_start]1400 看完綿羊秀出來 1530 抵達 The Entrance Memorial Park Car Park 看鵜鶘秀 [cite: 3]<br>
-                [cite_start]開車 1.5 小時住宿 BIG4 Bays Holiday Park [cite: 3]<br>
-                [cite_start]**Nelson Bay 潛水看 grey nurse shark** [cite: 3]<br>
-                [cite_start]The Shark, Ray & All Creatures Rescue 看鯊魚 [cite: 3]<br>
-                [cite_start]Newcastle Breakwater 漂亮的燈塔散步海堤 [cite: 3]<br>
-                [cite_start]Oyster Bank 沈船海堤 [cite: 3]<br>
-                [cite_start]**Nelson Bay 潛水** [cite: 3]
-            </td>
-        </tr>
-        <tr style="background-color: #ffe89f;">
-            <td class="date-column diving-day">
-                [cite_start]2026-01-30<br>Day15 [cite: 3]
-            </td>
-            <td>
-                [cite_start]**Nelson Bay 潛水** [cite: 3]<br>
-                [cite_start]Belmont 16s 帆船馬頭 [cite: 3]<br>
-                [cite_start]Horseshoe Beach 狗公園海灘 [cite: 3]<br>
-                [cite_start]有行程就開車至 Coffs Harbour 住宿 (4 小時)，小鸚鵡餵食 [cite: 3]<br>
-                [cite_start]沒行程就開到 Goodwood Island (5 小時) 或拜倫灣 (6 小時) [cite: 3]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-01-31<br>Day16 [cite: 3]
-            </td>
-            <td>
-                [cite_start]Saltwater National Park 火雞公園 [cite: 3]<br>
-                [cite_start]North Brother Lookout 三個湖展望點 [cite: 3]<br>
-                [cite_start]Koala Conservation Hospital Port Macquarie 無尾熊醫院遷移中 [cite: 3]<br>
-                [cite_start]Discovery Parks - Byron Bay [cite: 3]
-            </td>
-        </tr>
-        <tr style="background-color: #ffe89f;">
-            <td class="date-column diving-day">
-                [cite_start]2026-02-01<br>Day17 [cite: 3]
-            </td>
-            <td>
-                [cite_start]**拜倫灣潛水，據說都是豹紋鯊** [cite: 3]<br>
-                [cite_start]下午至海灘或燈塔 [cite: 3]
-            </td>
-        </tr>
-        <tr style="background-color: #ffe89f;">
-            <td class="date-column diving-day">
-                [cite_start]2026-02-02<br>Day18 [cite: 3]
-            </td>
-            <td>
-                [cite_start]**早上潛水或早上睡到很飽再離開** [cite: 3]<br>
-                [cite_start]中午至 Belongil Beach South - Dog Exercise Area 煮食 [cite: 3]<br>
-                [cite_start]1330-1430 開至 Tweed Heads 採買 [cite: 3]<br>
-                [cite_start]晚上住宿 Mystery Mountain Farmstay (費用未知) [cite: 3]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-02-03<br>Day19 [cite: 3]
-            </td>
-            <td>
-                [cite_start]農場玩到中午離開 [cite: 3]<br>
-                [cite_start]開車 40 分鐘到的 Glow Worm Caves 看螢火蟲 (僅營業到下午三點) [cite: 3]<br>
-                [cite_start]開車半小時至黃金海岸住宿 (SW 附近不移動) [cite: 3]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-02-04<br>Day20 [cite: 3]
-            </td>
-            <td>
-                [cite_start]Sea world 線上訂票較便宜 $1600 台幣 [cite: 3]<br>
-                [cite_start]買買隔天三餐，同地點住宿 [cite: 3]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-02-05<br>Day21 [cite: 3]
-            </td>
-            <td>
-                [cite_start]7 點前離開，開車兩小時 [cite: 3]<br>
-                [cite_start]澳洲動物園 (營業時間 9-17) [cite: 3]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-02-06<br>Day22 [cite: 3]
-            </td>
-            <td>
-                [cite_start]開車一小時至住宿 [cite: 3]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-02-07<br>Day23 [cite: 4]
-            </td>
-            <td>
-                [cite_start]逛 MALL，買東西 [cite: 4]<br>
-                [cite_start]下午 1430 還車 [cite: 4]<br>
-                [cite_start]新加坡航空經濟艙 Airbus A350 SQ 266 1810-0005 [cite: 4]
-            </td>
-        </tr>
-        <tr>
-            <td class="date-column">
-                [cite_start]2026-02-08<br>Day24 [cite: 4]
-            </td>
-            <td>
-                [cite_start]新加坡航空經濟艙 Airbus A350 SQ 872 1045-1525 [cite: 4]
-            </td>
-        </tr>
-    </tbody>
-</table>
+    <h1>澳洲露營車之旅行程表 (2026)</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th class="date-column">日期/天數</th>
+                <th class="itinerary-column">行程</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="date-column">
+                    2026-01-16<br>Day1 [cite: 1]
+                </td>
+                <td>
+                    酷航 TR 897 TPE->SIN 0145-0645 轉機3:55 [cite: 1]<br>
+                    酷航 TR 24 SIN->MEL 1020-2050 [cite: 1]<br>
+                    台灣帶些糧食吃，新加坡轉機早餐，隔天墨爾本早餐。機上花錢點餐跟自己帶點心 [cite: 1]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-17<br>Day2 [cite: 1]
+                </td>
+                <td>
+                    Jetstar JQ 699 0600-0715 MEL-HBA $1500 [cite: 1]<br>
+                    機場櫃檯租車 (問門票/還車時間) Devil Finder from Tasmania Campers [cite: 1]<br>
+                    0900 路上餐廳Geilston Bay Fish Shop早餐，Bonorong Wildlife Sanctuary逛保護區 [cite: 1]<br>
+                    1300 隔壁IGA買熟食午餐，順便採買晚餐與隔日早午餐 [cite: 1]<br>
+                    15:00-16:00 至 Triabunna Cabin & Caravan Park [cite: 1]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-18<br>Day3 [cite: 1]
+                </td>
+                <td>
+                    8:30 攜帶午餐搭船至 Maria Island [cite: 1]<br>
+                    野生袋熊、地質奇觀 [cite: 1]<br>
+                    14:30 搭船回程 [cite: 1]<br>
+                    住宿旁邊有 IGA，買晚/早午餐 [cite: 1]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-19<br>Day4 [cite: 1]
+                </td>
+                <td>
+                    早起開車至酒杯灣 0800-0930 [cite: 1]<br>
+                    0930-1130 酒杯灣來回與空拍 (Wineglass Bay Lookout) [cite: 1]<br>
+                    停車場午餐 1.5 小時 [cite: 1]<br>
+                    1300-1600 開車至 Sheffield 壁畫小鎮 [cite: 1]<br>
+                    鎮上有 IGA 可以補貨，一個人採買一個人帶小孩周邊壁畫拍照，要有熱湯晚/隔天早/午餐 [cite: 1]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-20<br>Day5 [cite: 1]
+                </td>
+                <td>
+                    開車 0.5 小時至 Gowrie Park Wilderness Village 辦理入住 [cite: 1]<br>
+                    再至 Lake Gairdner 看鴨嘴獸 (日出與日落前後一小時最佳 0530-0730/1930-2030) [cite: 1]<br>
+                    開車半小時至 Cradle Mountain, Tasmania 停車，接駁車 0800-1800 營運 [cite: 1]<br>
+                    亦須趕在 0800 入園等第一班接駁車，中途站 Ronny Creek 下車先走袋熊步道 [cite: 1]<br>
+                    走上 Dove Lake，逛完之後搭接駁車下山 [cite: 1]<br>
+                    1530 前離開，開車 1.5 小時採買晚餐/早午/墨爾本晚餐泡麵 [cite: 1]<br>
+                    至 Penguin Caravan Park 先確認營位及晚餐 [cite: 1]<br>
+                    Burnie 看企鵝 [cite: 1]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-21<br>Day6 [cite: 1]
+                </td>
+                <td>
+                    0830 出發 1130 至里奇蒙橋，停車場可以簡單午餐 [cite: 1]<br>
+                    1230-1300 開至機場還車 [cite: 1]<br>
+                    JQ 706 HBA-MEL 1545-1710 [cite: 1]<br>
+                    晚上機場附近住宿，免費接駁 [cite: 1]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-22<br>Day7 [cite: 2]
+                </td>
+                <td>
+                    0800 搭 Uber 至 Apollo 租車 [cite: 2]<br>
+                    1000 開車至市區觀光，在 Ron Barassi Snr Park 附近找停車位 (免費 3 小時停車) [cite: 2]<br>
+                    Waterfront City/Docklands Dr #D11 搭乘免費電車 [cite: 2]<br>
+                    Flagstaff Station/La Trobe St #3 逛維多利亞市場吃午餐 [cite: 2]<br>
+                    回去換車位 [cite: 2]<br>
+                    State Library stations/La Trobe St #6 圖書館 [cite: 2]<br>
+                    Spring St/Flinders St #8 Cooks' Cottage 庫克船長小屋 [cite: 2]<br>
+                    旁邊轉角大教堂區 [cite: 2]<br>
+                    Hosier Ln 塗鴉大街，聖保羅教堂 [cite: 2]<br>
+                    建於 1892 年的哥德式建築，銅像是第一位環澳航行的 Matthew Flinders [cite: 2]<br>
+                    1600 離開，1600-1640 開至營地，確認營位後採買 [cite: 2]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-23<br>Day8 [cite: 2]
+                </td>
+                <td>
+                    0600 離開營地 [cite: 2]<br>
+                    0700 抵達 Polperro Dolphin Swims 0800 開船，11 點返航 [cite: 2]<br>
+                    中午採買 [cite: 2]<br>
+                    下午 Bayplay Adventure Tours 看草海龍 [cite: 2]<br>
+                    (若在 TA 已經看到企鵝則以下行程不跑住一樣地方好好休息) [cite: 2]<br>
+                    下午抵達營地 NRMA Phillip Island Beachfront Holiday Park [cite: 2]<br>
+                    飛利浦島企鵝觀賞 2000 報到 (需預訂) [cite: 2]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-24<br>Day9 [cite: 2]
+                </td>
+                <td>
+                    早上離開飛利浦島，開車 3.5 小時抵達無尾熊島 Raymon Island [cite: 2]<br>
+                    先去採買及午餐還有確認營地 [cite: 2]<br>
+                    下午免費渡輪登島散步，最好 2 點多上島 [cite: 2]<br>
+                    天氣陰涼或天黑前有機會見到針鼴，上島前注意回程船班 [cite: 2]<br>
+                    住無尾熊島附近營地 [cite: 2]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-25<br>Day10 [cite: 2]
+                </td>
+                <td>
+                    0800-0900 開車至 Lakes Entrance Rotunda [cite: 2]<br>
+                    0900-1100 步道步行半小時至出海口看海豹 [cite: 2]<br>
+                    旁邊的 Woolworths Lakes Entrance 採買晚/早午餐 [cite: 2]<br>
+                    1200-1300 開車至 Seat by the Snowy river 午餐，旁邊有公廁 [cite: 2]<br>
+                    1400-1600 開車至營地入住，辦完手續再至 Bombala Platypus Reserve 看鴨嘴獸 [cite: 2]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-26<br>Day11 [cite: 2]
+                </td>
+                <td>
+                    0600-0830 出至 Tidbinbilla Nature Reserve [cite: 2]<br>
+                    入園先問想看動物的資訊，趁早看 [cite: 2]<br>
+                    車停在 Eucalypt Forest Carpark，走去 Tidbinbilla Sanctuary 看看 [cite: 2]<br>
+                    接著開車去 Paddys River，草皮上有大量袋鼠，順便野餐 [cite: 2]<br>
+                    最後可至 Gibraltar Peak Hike 散步 [cite: 2]<br>
+                    下午至市區採買，去營地 [cite: 2]<br>
+                    以下兩個園區皆不用門票挑一個逛：Tidbinbilla Nature Reserve 植物園 (停車 3.8/小時)，National Museum of Australia (停車 4/小時) [cite: 2]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-27<br>Day12 [cite: 2]
+                </td>
+                <td>
+                    1200-1230 開車至 Anderson VC Rest Area 湖邊的休息站午餐 [cite: 2]<br>
+                    1300-1530 開至 Kiama LighthouseBulli，岬角上的美麗燈塔，岬角前方有一個海潮噴口 [cite: 2]<br>
+                    1630-1730 Beach Tourist Park 先入住後再去採買及晚餐 [cite: 2]<br>
+                    傍晚前至 Rube Hargrave Park 停車，拍攝 Sea Cliff Bridge [cite: 2]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-28<br>Day13 [cite: 3]
+                </td>
+                <td>
+                    0730-0800 開車至 Crystal Street car park 停車 [cite: 3]<br>
+                    搭火車至雪梨市中心 Petersham 站 - Town Hall 站 [cite: 3]<br>
+                    0900-1100 依序逛市政廳、逛海德公園、聖母主教座堂 [cite: 3]<br>
+                    中午附近吃午餐，或自帶午餐公園解決 [cite: 3]<br>
+                    1200 走路 20 分鐘至環形碼頭，搭乘 F6 Mosman Bay 路線至 Cremorne Point Wharf 遠眺歌劇院 [cite: 3]<br>
+                    1400 開始回程，走到 Wynyard 站搭車回到 Petersham 站 [cite: 3]<br>
+                    開車 1 小時至 Wanderest Travellers Park 入住，再去採買 [cite: 3]
+                </td>
+            </tr>
+            <tr class="diving-day">
+                <td class="date-column diving-day">
+                    2026-01-29<br>Day14 [cite: 3]
+                </td>
+                <td>
+                    0800-0900 開車至 Calmsley Hill City Farm 農場秀 [cite: 3]<br>
+                    媽媽陪玩爸爸休息 [cite: 3]<br>
+                    1400 看完綿羊秀出來 1530 抵達 The Entrance Memorial Park Car Park 看鵜鶘秀 [cite: 3]<br>
+                    開車 1.5 小時住宿 BIG4 Bays Holiday Park [cite: 3]<br>
+                    **Nelson Bay 潛水看 grey nurse shark** [cite: 3]<br>
+                    The Shark, Ray & All Creatures Rescue 看鯊魚 [cite: 3]<br>
+                    Newcastle Breakwater 漂亮的燈塔散步海堤 [cite: 3]<br>
+                    Oyster Bank 沈船海堤 [cite: 3]<br>
+                    **Nelson Bay 潛水** [cite: 3]
+                </td>
+            </tr>
+            <tr class="diving-day">
+                <td class="date-column diving-day">
+                    2026-01-30<br>Day15 [cite: 3]
+                </td>
+                <td>
+                    **Nelson Bay 潛水** [cite: 3]<br>
+                    Belmont 16s 帆船馬頭 [cite: 3]<br>
+                    Horseshoe Beach 狗公園海灘 [cite: 3]<br>
+                    有行程就開車至 Coffs Harbour 住宿 (4 小時)，小鸚鵡餵食 [cite: 3]<br>
+                    沒行程就開到 Goodwood Island (5 小時) 或拜倫灣 (6 小時) [cite: 3]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-01-31<br>Day16 [cite: 3]
+                </td>
+                <td>
+                    Saltwater National Park 火雞公園 [cite: 3]<br>
+                    North Brother Lookout 三個湖展望點 [cite: 3]<br>
+                    Koala Conservation Hospital Port Macquarie 無尾熊醫院遷移中 [cite: 3]<br>
+                    Discovery Parks - Byron Bay [cite: 3]
+                </td>
+            </tr>
+            <tr class="diving-day">
+                <td class="date-column diving-day">
+                    2026-02-01<br>Day17 [cite: 3]
+                </td>
+                <td>
+                    **拜倫灣潛水，據說都是豹紋鯊** [cite: 3]<br>
+                    下午至海灘或燈塔 [cite: 3]
+                </td>
+            </tr>
+            <tr class="diving-day">
+                <td class="date-column diving-day">
+                    2026-02-02<br>Day18 [cite: 3]
+                </td>
+                <td>
+                    **早上潛水或早上睡到很飽再離開** [cite: 3]<br>
+                    中午至 Belongil Beach South - Dog Exercise Area 煮食 [cite: 3]<br>
+                    1330-1430 開至 Tweed Heads 採買 [cite: 3]<br>
+                    晚上住宿 Mystery Mountain Farmstay (費用未知) [cite: 3]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-02-03<br>Day19 [cite: 3]
+                </td>
+                <td>
+                    農場玩到中午離開 [cite: 3]<br>
+                    開車 40 分鐘到的 Glow Worm Caves 看螢火蟲 (僅營業到下午三點) [cite: 3]<br>
+                    開車半小時至黃金海岸住宿 (SW 附近不移動) [cite: 3]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-02-04<br>Day20 [cite: 3]
+                </td>
+                <td>
+                    Sea world 線上訂票較便宜 $1600 台幣 [cite: 3]<br>
+                    買買隔天三餐，同地點住宿 [cite: 3]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-02-05<br>Day21 [cite: 3]
+                </td>
+                <td>
+                    7 點前離開，開車兩小時 [cite: 3]<br>
+                    澳洲動物園 (營業時間 9-17) [cite: 3]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-02-06<br>Day22 [cite: 3]
+                </td>
+                <td>
+                    開車一小時至住宿 [cite: 3]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-02-07<br>Day23 [cite: 4]
+                </td>
+                <td>
+                    逛 MALL，買東西 [cite: 4]<br>
+                    下午 1430 還車 [cite: 4]<br>
+                    新加坡航空經濟艙 Airbus A350 SQ 266 1810-0005 [cite: 4]
+                </td>
+            </tr>
+            <tr>
+                <td class="date-column">
+                    2026-02-08<br>Day24 [cite: 4]
+                </td>
+                <td>
+                    新加坡航空經濟艙 Airbus A350 SQ 872 1045-1525 [cite: 4]
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
