@@ -3,405 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>澳洲 25 天露營車．生態與海洋全覽 (V5 修訂版)</title>
+    <title>澳洲露營車之旅行程表 (Icon 風格)</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif; line-height: 1.6; color: #333; margin: 20px; background-color: #f4f7f6; }
-        h1 { text-align: center; color: #2c3e50; margin-bottom: 10px; }
-        p.subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-size: 1.1em; }
-        
-        .section-header { 
-            background-color: #34495e; 
-            color: #fff; 
-            padding: 12px 20px; 
-            margin-top: 40px; 
-            border-radius: 8px 8px 0 0; 
-            font-size: 1.2em;
-            display: flex;
-            align-items: center;
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: #f9f9f9;
         }
-        .section-header .icon { margin-right: 10px; font-size: 1.4em; }
-
-        table { width: 100%; border-collapse: collapse; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-radius: 0 0 8px 8px; overflow: hidden; margin-bottom: 20px; }
-        
-        th { background-color: #ecf0f1; color: #2c3e50; font-weight: bold; padding: 15px; text-align: left; border-bottom: 2px solid #bdc3c7; }
-        td { border-bottom: 1px solid #eee; padding: 15px; vertical-align: top; }
-        
-        /* Column Widths */
-        .col-date { width: 12%; white-space: nowrap; font-weight: bold; color: #2980b9; }
-        .col-route { width: 45%; }
-        .col-tips { width: 43%; }
-
-        /* Highlights & Tags */
-        .highlight { font-weight: bold; color: #e67e22; }
-        .tag-flight { display: inline-block; background-color: #3498db; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
-        .tag-drive { display: inline-block; background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
-        .tag-activity { display: inline-block; background-color: #e74c3c; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; margin-right: 5px; }
-        
-        .tips-box { background-color: #fcf3cf; padding: 10px; border-left: 4px solid #f1c40f; font-size: 0.9em; margin-top: 5px; color: #7f6000; }
-        .food-info { color: #8e44ad; font-size: 0.9em; margin-top: 5px; display: block; }
-        .stay-info { color: #16a085; font-weight: bold; font-size: 0.95em; margin-top: 5px; display: block; }
-
-        @media (max-width: 768px) {
-            .col-date, .col-route, .col-tips { width: 100%; display: block; }
-            tr { display: block; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px; }
-            td { display: block; border: none; padding: 10px 15px; }
-            th { display: none; }
-            .col-date { background-color: #f0f3f4; border-bottom: 1px solid #ddd; }
+        h1 {
+            color: #007bff;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #e9ecef;
+            font-weight: bold;
+            width: 15%;
+            color: #333;
+        }
+        .date-column {
+            width: 15%;
+            text-align: center;
+            white-space: nowrap;
+            font-size: 1.1em;
+            background-color: #f7f7f7;
+            font-weight: 600;
+        }
+        /* 潛水日期的高亮樣式 */
+        .diving-day {
+            background-color: #ffe89f; /* 亮黃色 */
+            font-weight: bold;
+            border-left: 5px solid #007bff; /* 加強標示 */
+        }
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        .activity-icon {
+            font-size: 1.4em;
+            margin-right: 10px;
+            line-height: 1.2;
+        }
+        .activity-text {
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
 
-    <h1>💎 澳洲 25 天露營車．生態與海洋全覽 (V5)</h1>
-    <p class="subtitle">塔斯馬尼亞 ✈ 維多利亞 ✈ 新南威爾斯 ✈ 昆士蘭</p>
+    <h1>🇦🇺 澳洲露營車與潛水之旅 2026</h1>
 
-    <div class="section-header">
-        <span class="icon">🐻</span> 第 1 部份：塔斯馬尼亞 - 荒野與袋熊 (Tasmania)
-    </div>
     <table>
         <thead>
             <tr>
-                <th class="col-date">日期 / 天數</th>
-                <th class="col-route">行程規劃 & 路線</th>
-                <th class="col-tips">重點目標 🎯 與住宿餐飲</th>
+                <th class="date-column">日期/天數</th>
+                <th class="itinerary-column">活動行程</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td class="col-date">01/16 (五)<br>Day 1</td>
-                <td class="col-route">
-                    <span class="tag-flight">飛行</span> <strong>出發：台北 (TPE) &rarr; 新加坡 &rarr; 墨爾本</strong><br>
-                    酷航 TR 897 (01:45-06:45) / TR 24 (10:20-20:50)<br>
-                    抵達墨爾本後休息。
-                </td>
-                <td class="col-tips">
-                    <div class="tips-box">💡 提醒：自備一些糧食，新加坡轉機時吃早餐。</div>
+                <td class="date-column">2026-01-16<br>Day 1</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">✈️</span><span class="activity-text">酷航 TR 897 TPE->SIN (0145-0645)</span></div>
+                    <div class="activity-item"><span class="activity-icon">✈️</span><span class="activity-text">酷航 TR 24 SIN->MEL (1020-2050)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🍽️</span><span class="activity-text">機上用餐與轉機休息</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/17 (六)<br>Day 2</td>
-                <td class="col-route">
-                    <span class="tag-flight">飛行</span> JQ 699 MEL (06:00) &rarr; HBA (07:15)<br>
-                    <span class="tag-drive">取車</span> 機場櫃檯租露營車 (Devil Finder)<br>
-                    <span class="tag-activity">活動</span> <strong>Bonorong Wildlife Sanctuary</strong> (野生動物收容所)<br>
-                    下午前往 Triabunna。
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：近距離接觸塔斯馬尼亞惡魔</span><br>
-                    <span class="stay-info">🏡 住宿：Triabunna Cabin & Caravan Park</span>
-                    <span class="food-info">🍽️ 早：路上餐廳 / 午：IGA熟食 / 晚：營地自煮</span>
+                <td class="date-column">2026-01-17<br>Day 2</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">✈️</span><span class="activity-text">Jetstar JQ 699 MEL->HBA (0600-0715)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">機場櫃檯租車 Devil Finder (Tasmania Campers)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐨</span><span class="activity-text">Bonorong Wildlife Sanctuary 逛保護區</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">IGA 採買晚餐及補給</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏕️</span><span class="activity-text">入住 Triabunna Cabin & Caravan Park</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/18 (日)<br>Day 3</td>
-                <td class="col-route">
-                    <span class="tag-activity">渡輪</span> 08:30 前往 <strong>Maria Island (瑪麗亞島)</strong><br>
-                    全島徒步：尋找野生袋熊 & 觀賞 Painted Cliffs 地質奇觀<br>
-                    14:30 搭船返回 Triabunna。
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：滿地的野生袋熊 (Wombats)</span><br>
-                    <div class="tips-box">💡 建議早點回程休息，避免過度疲勞。</div>
-                    <span class="stay-info">🏡 住宿：Triabunna Cabin & Caravan Park</span>
+                <td class="date-column">2026-01-18<br>Day 3</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">⛴️</span><span class="activity-text">搭船至 Maria Island (攜帶午餐)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐨</span><span class="activity-text">野生袋熊、地質奇觀觀賞</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">住宿旁 IGA 晚餐補給</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/19 (一)<br>Day 4</td>
-                <td class="col-route">
-                    <span class="tag-drive">開車</span> 前往酒杯灣 (Wineglass Bay Lookout)<br>
-                    09:30-11:30 觀景台步道與<span class="highlight">空拍</span><br>
-                    下午：Sheffield (壁畫小鎮) &rarr; Gowrie Park<br>
-                    <span class="tag-activity">夜遊</span> <strong>Lake Gairdner 看鴨嘴獸</strong> (19:30-20:30)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：酒杯灣空拍、黃昏鴨嘴獸</span><br>
-                    <div class="tips-box">💡 鴨嘴獸出沒黃金時間：日落前後一小時。</div>
-                    <span class="stay-info">🏡 住宿：Gowrie Park Wilderness Village</span>
+                <td class="date-column">2026-01-19<br>Day 4</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">早起開車至酒杯灣 Wineglass Bay Lookout (0800-0930)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏞️</span><span class="activity-text">酒杯灣來回健行與空拍</span></div>
+                    <div class="activity-item"><span class="activity-icon">🖼️</span><span class="activity-text">開車至 Sheffield 壁畫小鎮參觀</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">鎮上 IGA 補貨 (晚餐/隔日早午餐)</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/20 (二)<br>Day 5</td>
-                <td class="col-route">
-                    <span class="tag-activity">健行</span> <strong>Cradle Mountain (搖籃山)</strong><br>
-                    08:00 前搭接駁車入園 &rarr; Ronny Creek (袋熊步道) &rarr; Dove Lake (鴿子湖)<br>
-                    下午：開車至 Burnie<br>
-                    <span class="tag-activity">生態</span> <strong>Burnie 小企鵝歸巢</strong> (日落後)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：袋熊步道、野生小企鵝</span><br>
-                    <span class="stay-info">🏡 住宿：Penguin Caravan Park</span>
-                    <span class="food-info">🍽️ 晚餐：Burnie 採買或自煮</span>
+                <td class="date-column">2026-01-20<br>Day 5</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🏕️</span><span class="activity-text">Gowrie Park Wilderness Village 辦理入住 (0.5 小時車程)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🦌</span><span class="activity-text">Lake Gairdner 看鴨嘴獸 (日出/日落前後)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🚍</span><span class="activity-text">Cradle Mountain - Ronny Creek 袋熊步道 / Dove Lake 健行</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">採買補給 (1.5 小時車程)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐧</span><span class="activity-text">Burnie 看企鵝 (Penguin Caravan Park)</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/21 (三)<br>Day 6</td>
-                <td class="col-route">
-                    <span class="tag-drive">開車</span> 08:30 出發 &rarr; Richmond Bridge (里奇蒙橋)<br>
-                    12:30 機場還車<br>
-                    <span class="tag-flight">飛行</span> JQ 706 HBA (15:45) &rarr; MEL (17:10)
-                </td>
-                <td class="col-tips">
-                    <span class="stay-info">🏡 住宿：墨爾本機場附近 (含免費接駁)</span>
-                    <div class="tips-box">💡 預留充裕時間還車。</div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="section-header">
-        <span class="icon">🐬</span> 第 2 部份：維多利亞與坎培拉 - 海洋與首都 (VIC & ACT)
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th class="col-date">日期 / 天數</th>
-                <th class="col-route">行程規劃 & 路線</th>
-                <th class="col-tips">重點目標 🎯 與住宿餐飲</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="col-date">01/22 (四)<br>Day 7</td>
-                <td class="col-route">
-                    <span class="tag-drive">租車</span> 08:00 Apollo 租露營車<br>
-                    市區觀光：Ron Barassi Snr Park (免費停車3hr)<br>
-                    搭免費電車 &rarr; <strong>Victoria Market (維多利亞市場)</strong>
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：墨爾本市區漫遊</span><br>
-                    <div class="tips-box">💡 注意免費停車時限，善用免費路面電車。</div>
+                <td class="date-column">2026-01-21<br>Day 6</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🏛️</span><span class="activity-text">里奇蒙橋 (Richmond Bridge) 午餐</span></div>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">機場還車 (HBA)</span></div>
+                    <div class="activity-item"><span class="activity-icon">✈️</span><span class="activity-text">JQ 706 HBA->MEL (1545-1710)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏠</span><span class="activity-text">機場附近住宿 (免費接駁)</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/23 (五)<br>Day 8</td>
-                <td class="col-route">
-                    <span class="tag-activity">市區</span> 州立圖書館、庫克船長小屋、聖保羅大教堂<br>
-                    <strong>Hosier Ln (塗鴉巷)</strong><br>
-                    16:00 離開市區前往營地。
-                </td>
-                <td class="col-tips">
-                    <span class="stay-info">🏡 住宿：墨爾本近郊營地</span>
-                    <span class="food-info">🍽️ 午餐：市區 / 晚餐：採買自煮</span>
+                <td class="date-column">2026-01-22<br>Day 7</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">Uber 至 Apollo 租車 (0800)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏙️</span><span class="activity-text">墨爾本市區觀光 (Docklands, 免費電車)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">維多利亞市場吃午餐</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏛️</span><span class="activity-text">州立圖書館、庫克船長小屋、大教堂區、塗鴉大街</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏕️</span><span class="activity-text">開車至營地入住並採買</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/24 (六)<br>Day 9</td>
-                <td class="col-route">
-                    <span class="tag-activity">出海</span> 08:00 <strong>Polperro Dolphin Swims (海豚共遊)</strong><br>
-                    下午：<strong>Bayplay Adventure Tours (尋找草海龍)</strong><br>
-                    晚上：菲利普島企鵝遊行 (20:00 報到，需預訂)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：海豚、草海龍 (Weedy Seadragon)、神仙企鵝</span><br>
-                    <div class="tips-box">💡 若塔州已看過企鵝，可取消晚上行程休息。</div>
-                    <span class="stay-info">🏡 住宿：NRMA Phillip Island Beachfront</span>
+                <td class="date-column">2026-01-23<br>Day 8</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🐬</span><span class="activity-text">Polperro Dolphin Swims (0800 開船，11 點返航)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐠</span><span class="activity-text">Bayplay Adventure Tours 看草海龍 (可選)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏕️</span><span class="activity-text">NRMA Phillip Island Beachfront Holiday Park 入住</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐧</span><span class="activity-text">飛利浦島企鵝觀賞 (2000 報到)</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/25 (日)<br>Day 10</td>
-                <td class="col-route">
-                    <span class="tag-drive">移動</span> 開車 3.5hr 至 Raymond Island<br>
-                    <span class="tag-activity">生態</span> 下午搭免費渡輪登島<br>
-                    尋找無尾熊 & 針鼴 (Echidna)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：滿樹的野生無尾熊</span><br>
-                    <div class="tips-box">💡 建議 14:00 後上島，天黑前有機會看到針鼴。</div>
-                    <span class="stay-info">🏡 住宿：無尾熊島附近營地</span>
+                <td class="date-column">2026-01-24<br>Day 9</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">開車 3.5 小時至 Raymon Island (無尾熊島)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐨</span><span class="activity-text">下午搭免費渡輪登島散步，尋找無尾熊與針鼴</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">採買及午餐，確認營地</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏕️</span><span class="activity-text">住無尾熊島附近營地</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/26 (一)<br>Day 11</td>
-                <td class="col-route">
-                    <span class="tag-activity">景點</span> Lakes Entrance (看海豹)<br>
-                    午餐：Seat by the Snowy river<br>
-                    <span class="tag-activity">黃昏</span> <strong>Bombala Platypus Reserve (看鴨嘴獸)</strong>
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：海豹、鴨嘴獸保護區</span><br>
-                    <span class="stay-info">🏡 住宿：Bombala 附近營地</span>
+                <td class="date-column">2026-01-25<br>Day 10</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🌊</span><span class="activity-text">Lakes Entrance Rotunda 步道看海豹</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">Woolworths Lakes Entrance 採買 (晚/早午餐)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🍽️</span><span class="activity-text">Seat by the Snowy river 午餐</span></div>
+                    <div class="activity-item"><span class="activity-icon">🦌</span><span class="activity-text">Bombala Platypus Reserve 看鴨嘴獸</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/27 (二)<br>Day 12</td>
-                <td class="col-route">
-                    <span class="tag-activity">晨間</span> <strong>Tidbinbilla Nature Reserve</strong> (06:00出發)<br>
-                    坎培拉：National Museum 或 Botanic Gardens (擇一)<br>
-                    下午：Kiama Lighthouse (噴水洞)<br>
-                    傍晚：<strong>Sea Cliff Bridge (海崖大橋)</strong> 拍照
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：首都生態、海崖大橋夕陽</span><br>
-                    <div class="tips-box">💡 Tidbinbilla 早晨動物最活躍。</div>
-                    <span class="stay-info">🏡 住宿：Beach Tourist Park</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="section-header">
-        <span class="icon">🦈</span> 第 3 部份：雪梨與新南威爾斯 - 城市與潛水 (NSW)
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th class="col-date">日期 / 天數</th>
-                <th class="col-route">行程規劃 & 路線</th>
-                <th class="col-tips">重點目標 🎯 與住宿餐飲</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="col-date">01/28 (三)<br>Day 13</td>
-                <td class="col-route">
-                    <span class="tag-activity">雪梨</span> 火車進城 (Petersham &rarr; Town Hall)<br>
-                    景點：市政廳、海德公園、聖母主教座堂<br>
-                    <span class="tag-activity">渡輪</span> 環形碼頭搭 F6 至 Cremorne Point (眺望歌劇院)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：雪梨歌劇院與港灣美景</span><br>
-                    <span class="stay-info">🏡 住宿：Wanderest Travellers Park</span>
+                <td class="date-column">2026-01-26<br>Day 11</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🐨</span><span class="activity-text">Tidbinbilla Nature Reserve 看動物 (趁早)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🧺</span><span class="activity-text">Paddys River 野餐 (大量袋鼠)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏞️</span><span class="activity-text">Gibraltar Peak Hike 散步</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">市區採買，前往營地</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/29 (四)<br>Day 14</td>
-                <td class="col-route">
-                    <span class="tag-activity">親子</span> <strong>Calmsley Hill City Farm</strong> (農場秀)<br>
-                    下午：The Entrance (15:30 鵜鶘餵食秀)<br>
-                    移動至 Nelson Bay
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：剪羊毛秀、野生鵜鶘群</span><br>
-                    <span class="stay-info">🏡 住宿：BIG4 Bays Holiday Park</span>
+                <td class="date-column">2026-01-27<br>Day 12</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🍽️</span><span class="activity-text">Anderson VC Rest Area 湖邊休息站午餐</span></div>
+                    <div class="activity-item"><span class="activity-icon">🌊</span><span class="activity-text">Kiama Lighthouse & Blowhole 海潮噴口</span></div>
+                    <div class="activity-item"><span class="activity-icon">🌅</span><span class="activity-text">Rube Hargrave Park 拍攝 Sea Cliff Bridge</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏕️</span><span class="activity-text">Beach Tourist Park 入住並採買</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/30 (五)<br>Day 15</td>
-                <td class="col-route">
-                    <span class="tag-activity">潛水</span> <strong>Nelson Bay 潛水</strong> (看灰護士鯊 Grey Nurse Shark)<br>
-                    景點：鯊魚魟魚救援中心 (Irukandji Shark & Ray)<br>
-                    散步：Newcastle Breakwater 燈塔
+                <td class="date-column">2026-01-28<br>Day 13</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🚆</span><span class="activity-text">搭火車至雪梨市中心觀光 (Petersham->Town Hall)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏛️</span><span class="activity-text">市政廳、海德公園、聖母主教座堂</span></div>
+                    <div class="activity-item"><span class="activity-icon">⛴️</span><span class="activity-text">環形碼頭搭船至 Cremorne Point Wharf 遠眺歌劇院</span></div>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">開車 1 小時至 Wanderest Travellers Park 入住、採買</span></div>
                 </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：與鯊魚共潛 (護士鯊溫馴)</span><br>
-                    <span class="stay-info">🏡 住宿：BIG4 Bays Holiday Park</span>
+            </tr>
+            <tr class="diving-day">
+                <td class="date-column diving-day">2026-01-29<br>Day 14</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🐑</span><span class="activity-text">Calmsley Hill City Farm 農場秀</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐟</span><span class="activity-text">The Entrance Memorial Park 看鵜鶘秀</span></div>
+                    <div class="activity-item"><span class="activity-icon">🤿</span><span class="activity-text">**潛水：Nelson Bay 看 Grey Nurse Shark (岸潛)**</span></div>
+                    <div class="activity-item"><span class="activity-icon">🌊</span><span class="activity-text">Newcastle Breakwater/Oyster Bank 散步海堤</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏕️</span><span class="activity-text">住宿 BIG4 Bays Holiday Park</span></div>
+                </td>
+            </tr>
+            <tr class="diving-day">
+                <td class="date-column diving-day">2026-01-30<br>Day 15</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🤿</span><span class="activity-text">**潛水：Nelson Bay (第二次)**</span></div>
+                    <div class="activity-item"><span class="activity-icon">⛵</span><span class="activity-text">Belmont 16s 帆船馬頭 / Horseshoe Beach 狗公園海灘</span></div>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">開車至 Coffs Harbour 或 Byron Bay 住宿 (4-6 小時車程)</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">01/31 (六)<br>Day 16</td>
-                <td class="col-route">
-                    <span class="tag-activity">備用</span> Nelson Bay 潛水 (預備日)<br>
-                    景點：Belmont 16s 帆船碼頭、Horseshoe Beach (狗海灘)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：悠閒調整日</span><br>
-                    <div class="tips-box">💡 視前一日潛水狀況決定行程。</div>
+                <td class="date-column">2026-01-31<br>Day 16</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🏞️</span><span class="activity-text">Saltwater National Park / North Brother Lookout</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐨</span><span class="activity-text">Koala Conservation Hospital Port Macquarie (無尾熊醫院)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">開車至 Discovery Parks - Byron Bay 入住</span></div>
                 </td>
             </tr>
-        </tbody>
-    </table>
-
-    <div class="section-header">
-        <span class="icon">🐨</span> 第 4 部份：昆士蘭 - 陽光海岸與賦歸 (QLD)
-    </div>
-    <table>
-        <thead>
-            <tr>
-                <th class="col-date">日期 / 天數</th>
-                <th class="col-route">行程規劃 & 路線</th>
-                <th class="col-tips">重點目標 🎯 與住宿餐飲</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="col-date">02/01 (日)<br>Day 17</td>
-                <td class="col-route">
-                    <span class="tag-drive">長途</span> 沿太平洋海岸公路北上<br>
-                    選擇住宿點：Coffs Harbour (4hr) 或 Goodwood Island (5hr) 或 Byron Bay (6hr)
+            <tr class="diving-day">
+                <td class="date-column diving-day">2026-02-01<br>Day 17</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🤿</span><span class="activity-text">**潛水：拜倫灣 (據說有 Leopard Shark 豹紋鯊)**</span></div>
+                    <div class="activity-item"><span class="activity-icon">燈塔</span><span class="activity-text">下午至海灘或燈塔觀光</span></div>
                 </td>
-                <td class="col-tips">
-                    <div class="tips-box">💡 單純移動日，建議依體力決定落腳處。</div>
+            </tr>
+            <tr class="diving-day">
+                <td class="date-column diving-day">2026-02-02<br>Day 18</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🤿</span><span class="activity-text">**早上潛水 (或睡到飽)**</span></div>
+                    <div class="activity-item"><span class="activity-icon">🍽️</span><span class="activity-text">Belongil Beach South (煮食午餐)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🏠</span><span class="activity-text">開車至 Tweed Heads 採買，晚間入住 Mystery Mountain Farmstay</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">02/02 (一)<br>Day 18</td>
-                <td class="col-route">
-                    <span class="tag-activity">景點</span> Saltwater National Park (火雞公園)<br>
-                    North Brother Lookout (三湖展望點)<br>
-                    Port Macquarie 無尾熊醫院 (注意是否搬遷)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：東海岸國家公園風光</span>
+                <td class="date-column">2026-02-03<br>Day 19</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🚜</span><span class="activity-text">上午農場活動 (Farmstay)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐛</span><span class="activity-text">Glow Worm Caves 看螢火蟲 (僅營業到下午三點)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">開車半小時至黃金海岸住宿 (SW 附近)</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">02/03 (二)<br>Day 19</td>
-                <td class="col-route">
-                    <span class="tag-activity">潛水</span> <strong>Byron Bay (Julian Rocks)</strong><br>
-                    下午：海灘散步或燈塔<br>
-                    傍晚：Belongil Beach South (煮食)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：豹紋鯊 (Leopard Shark) 季節</span><br>
-                    <div class="tips-box">💡 2月是Julian Rocks看豹紋鯊與海龜的旺季。</div>
-                    <span class="stay-info">🏡 住宿：Discovery Parks - Byron Bay</span>
+                <td class="date-column">2026-02-04<br>Day 20</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🐬</span><span class="activity-text">Sea World 海洋世界 (線上訂票較便宜)</span></div>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">採買隔天三餐</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">02/04 (三)<br>Day 20</td>
-                <td class="col-route">
-                    <span class="tag-activity">休閒</span> 拜倫灣預備日 (補潛水或睡飽)<br>
-                    13:30 Tweed Heads 採買<br>
-                    前往 <strong>Mystery Mountain Farmstay</strong> (神祕山農場)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：農場住宿體驗</span><br>
-                    <div class="tips-box">💡 務必確認農場是否接受露營車泊位。</div>
-                    <span class="stay-info">🏡 住宿：Mystery Mountain Farmstay</span>
+                <td class="date-column">2026-02-05<br>Day 21</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">7 點前離開，開車兩小時</span></div>
+                    <div class="activity-item"><span class="activity-icon">🐨</span><span class="activity-text">澳洲動物園 (Australia Zoo) (營業 9-17 點)</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">02/05 (四)<br>Day 21</td>
-                <td class="col-route">
-                    <span class="tag-activity">樂園</span> 農場玩到中午 &rarr; 黃金海岸 (Gold Coast)<br>
-                    下午：<strong>Sea World (海洋世界)</strong>
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：海洋主題樂園</span><br>
-                    <div class="tips-box">💡 門票建議線上預訂較便宜。</div>
-                    <span class="stay-info">🏡 住宿：黃金海岸附近</span>
+                <td class="date-column">2026-02-06<br>Day 22</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">開車一小時至住宿點，準備隔日還車</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">02/06 (五)<br>Day 22</td>
-                <td class="col-route">
-                    <span class="tag-drive">早起</span> 07:00 出發 &rarr; <strong>Australia Zoo (澳洲動物園)</strong><br>
-                    下午前往 Brisbane (布里斯本)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：史帝夫·厄文的鱷魚先生動物園</span>
+                <td class="date-column">2026-02-07<br>Day 23</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">🛒</span><span class="activity-text">逛 Mall 購物</span></div>
+                    <div class="activity-item"><span class="activity-icon">🚗</span><span class="activity-text">下午 1430 還車</span></div>
+                    <div class="activity-item"><span class="activity-icon">✈️</span><span class="activity-text">新加坡航空 SQ 266 BNE->SIN (1810-0005)</span></div>
                 </td>
             </tr>
             <tr>
-                <td class="col-date">02/07 (六)<br>Day 23</td>
-                <td class="col-route">
-                    <span class="tag-activity">最後巡禮</span> <strong>Daisy Hill Koala Centre (免費)</strong><br>
-                    逛 Mall 買伴手禮 &rarr; <strong>還車</strong><br>
-                    <span class="tag-flight">飛行</span> SQ 266 BNE (18:10) &rarr; SIN
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🎯 目標：免費無尾熊中心、順利還車</span><br>
-                    <div class="tips-box">👋 再見澳洲！</div>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-date">02/08 (日)<br>Day 24</td>
-                <td class="col-route">
-                    <span class="tag-flight">轉機</span> 新加坡轉機<br>
-                    SQ 872 SIN (10:45) &rarr; TPE (15:25)
-                </td>
-                <td class="col-tips">
-                    <span class="highlight">🏠 甜蜜的家</span>
+                <td class="date-column">2026-02-08<br>Day 24</td>
+                <td>
+                    <div class="activity-item"><span class="activity-icon">✈️</span><span class="activity-text">新加坡航空 SQ 872 SIN->TPE (1045-1525)</span></div>
                 </td>
             </tr>
         </tbody>
