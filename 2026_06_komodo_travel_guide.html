@@ -12,7 +12,7 @@
     margin: 0;
     padding: 24px;
   }
-  h1, h2 {
+  h1, h2, h3 {
     color: #0f766e;
   }
   h1 {
@@ -51,18 +51,29 @@
     font-weight: 600;
     white-space: nowrap;
   }
-  .emoji {
-    font-size: 1.1em;
-  }
-  .note-box {
+  .note-box, .photo-box {
     margin-top: 32px;
     background: #ffffff;
     border-radius: 12px;
     padding: 20px 24px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
-  .note-box h2 {
-    margin-top: 0;
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .photo-card img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .photo-card p {
+    margin: 8px 0 0;
+    font-size: 0.9em;
+    color: #475569;
+    text-align: center;
   }
   ul {
     padding-left: 20px;
@@ -74,7 +85,7 @@
 
 <h1>🇮🇩 2026 科摩多群島潛水行程</h1>
 <div class="subtitle">
-  Komodo National Park Dive Trip ｜ Ocean Banana Komodo 潛水船
+  Komodo National Park Dive Trip ｜ Ocean Banana Komodo
 </div>
 
 <table>
@@ -88,113 +99,68 @@
   <tr>
     <td class="day">Day 1<br>06/26（五）</td>
     <td>
-      ✈️ 搭乘中華航空 CI 771（TPE → DPS 09:10–14:40）前往峇里島。<br>
-      抵達後入住機場附近飯店，調整時差、為隔日早班國內線做準備。
+      ✈️ CI 771（TPE → DPS 09:10–14:40）前往峇里島。<br>
+      抵達後入住機場附近飯店，調整時差，為隔日早班國內線做準備。
     </td>
     <td>Grand Ixora Hotel</td>
-    <td>
-      早餐自理<br>
-      午餐：機上餐<br>
-      晚餐：中式餐廳
-    </td>
+    <td>早餐自理｜午餐機上｜晚餐中式餐廳</td>
   </tr>
 
   <tr class="dive">
     <td class="day">Day 2 🤿<br>06/27（六）</td>
     <td>
-      ✈️ 搭乘印尼國內線 ID 6333（DPS → LBJ 07:55–09:05）飛往拉布安巴佐。<br>
-      抵達後登上 <strong>Ocean Banana Komodo</strong> 潛水船，展開科摩多潛水之旅，當日安排 2 支潛水。
+      ✈️ ID 6333（DPS → LBJ 07:55–09:05）<br>
+      抵達後登上 Ocean Banana Komodo 潛水船，展開科摩多潛水行程（2 潛）。
     </td>
     <td>Sylvia Resort Komodo</td>
-    <td>
-      早餐：飯店<br>
-      午餐：潛水船<br>
-      晚餐：當地小吃
-    </td>
+    <td>早：飯店｜午：潛水船｜晚：當地小吃</td>
   </tr>
 
   <tr class="dive">
     <td class="day">Day 3 🤿<br>06/28（日）</td>
-    <td>
-      全日科摩多國家公園潛水活動，安排 3 支潛水。<br>
-      探索強勁流況中的大魚群、生態豐富的珊瑚礁與蝠魟出沒海域。
-    </td>
+    <td>全日科摩多潛水行程（3 潛），探索蝠魟、大魚群與流況潛點。</td>
     <td>Sylvia Resort Komodo</td>
-    <td>
-      早餐：飯店<br>
-      午餐：潛水船<br>
-      晚餐：當地小吃
-    </td>
+    <td>早：飯店｜午：潛水船｜晚：當地小吃</td>
   </tr>
 
   <tr class="dive">
     <td class="day">Day 4 🤿<br>06/29（一）</td>
-    <td>
-      繼續深入科摩多潛水熱點，安排 3 支潛水。<br>
-      視海況選擇經典流潛潛點，感受能見度佳且震撼的大型生物場面。
-    </td>
+    <td>持續深入科摩多國家公園潛水（3 潛），依海況選擇經典流潛點。</td>
     <td>Sylvia Resort Komodo</td>
-    <td>
-      早餐：飯店<br>
-      午餐：潛水船<br>
-      晚餐：當地小吃
-    </td>
+    <td>早：飯店｜午：潛水船｜晚：當地小吃</td>
   </tr>
 
   <tr class="dive">
     <td class="day">Day 5 🤿<br>06/30（二）</td>
-    <td>
-      全日潛水行程，安排 3 支潛水。<br>
-      持續探索蝠魟清潔站與魚群密集海域，為本次行程核心潛水日之一。
-    </td>
+    <td>全天潛水（3 潛），為本次行程核心潛水日之一。</td>
     <td>Sylvia Resort Komodo</td>
-    <td>
-      早餐：飯店<br>
-      午餐：潛水船<br>
-      晚餐：當地小吃
-    </td>
+    <td>早：飯店｜午：潛水船｜晚：當地小吃</td>
   </tr>
 
   <tr class="dive">
     <td class="day">Day 6 🤿<br>07/01（三）</td>
-    <td>
-      安排 3 支潛水，視團員狀況與流況挑選潛點。<br>
-      享受科摩多最後完整潛水日的水下世界。
-    </td>
+    <td>潛水 3 潛，視團員狀況與流況彈性安排潛點。</td>
     <td>Sylvia Resort Komodo</td>
-    <td>
-      早餐：飯店<br>
-      午餐：潛水船<br>
-      晚餐：當地小吃
-    </td>
+    <td>早：飯店｜午：潛水船｜晚：當地小吃</td>
   </tr>
 
   <tr class="dive">
     <td class="day">Day 7 🤿🐉<br>07/02（四）</td>
     <td>
-      上午完成 2 支潛水後，下午登島進行半日行程，近距離觀察世界知名的科摩多龍。<br>
-      為潛水與陸上體驗兼具的一天。
+      上午完成 2 潛，下午登島半日行程，近距離觀察科摩多龍。
     </td>
     <td>Sylvia Resort Komodo</td>
-    <td>
-      早餐：飯店<br>
-      午餐：潛水船<br>
-      晚餐：當地小吃
-    </td>
+    <td>早：飯店｜午：潛水船｜晚：當地小吃</td>
   </tr>
 
   <tr>
     <td class="day">Day 8<br>07/03（五）</td>
     <td>
-      ✈️ 搭乘 ID 6328（LBJ → DPS 11:35–12:50）返回峇里島，<br>
-      接續搭乘 CI 772（DPS → TPE 15:40–21:05）返台，結束難忘的科摩多潛水旅程。
+      ✈️ ID 6328（LBJ → DPS 11:35–12:50）<br>
+      ✈️ CI 772（DPS → TPE 15:40–21:05）返台。
     </td>
     <td>—</td>
-    <td>
-      早餐：飯店<br>
-      午餐：機場自理<br>
-      晚餐：機上餐
-    </td>
+    <td>早：飯店｜午：機場自理｜晚：機上</td>
   </tr>
 </table>
 
@@ -202,19 +168,40 @@
   <h2>📌 行程注意事項</h2>
   <ul>
     <li><strong>團費：</strong>NT$54,000／人</li>
-    <li><strong>團費不包含：</strong>國際及印尼國內機票、潛水裝備租借費用、最後一天峇里島機場午餐</li>
-    <li><strong>團費包含：</strong>
-      <ul>
-        <li>科摩多期間所有潛水與住宿</li>
-        <li>潛水期間三餐</li>
-        <li>潛水及住宿相關小費</li>
-        <li>當地外出用餐之交通安排</li>
-      </ul>
-    </li>
-    <li><strong>國際機票預估：</strong>約 NT$14,000～16,000</li>
-    <li><strong>印尼國內線機票：</strong>約 NT$6,000（由團主協助統一購買）</li>
-    <li><strong>潛水提醒：</strong>科摩多潛點多為流況潛水，請務必攜帶流勾（Reef Hook），建議具備良好中性浮力控制能力。</li>
+    <li><strong>不包含：</strong>國際及印尼國內機票、裝備租借、最後一天峇里島機場午餐</li>
+    <li><strong>包含：</strong>所有潛水與住宿、潛水期間三餐、潛水與住宿小費、當地用餐交通</li>
+    <li><strong>國際機票預估：</strong>NT$14,000～16,000</li>
+    <li><strong>印尼國內線：</strong>約 NT$6,000（團主統一購買）</li>
+    <li><strong>潛水提醒：</strong>多為流況潛水，請務必攜帶流勾（Reef Hook）。</li>
   </ul>
+</div>
+
+<div class="photo-box">
+  <h2>📸 行程實景精選</h2>
+
+  <h3>🛥️ Ocean Banana Komodo 潛水船</h3>
+  <div class="photo-grid">
+    <div class="photo-card">
+      <img src="40168625_239817480066232_4126226552155275264_n.jpg" alt="Ocean Banana Komodo 潛水船甲板">
+      <p>船上甲板休息空間</p>
+    </div>
+    <div class="photo-card">
+      <img src="50003919_288222078559105_5848104113924997120_n.jpg" alt="BIG BANANA 潛水船">
+      <p>BIG BANANA 潛水船全景</p>
+    </div>
+  </div>
+
+  <h3>🐋 科摩多水下世界</h3>
+  <div class="photo-grid">
+    <div class="photo-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Manta_birostris-Thailand.jpg" alt="Manta Ray">
+      <p>蝠魟（Manta Ray）</p>
+    </div>
+    <div class="photo-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Bigeye_trevally_school.jpg" alt="Fish School">
+      <p>熱帶大魚群</p>
+    </div>
+  </div>
 </div>
 
 </body>
