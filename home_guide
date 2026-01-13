@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居家使用手冊</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a7c59;
+            --accent-color: #f4a261;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .desc {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .desc i {
+            color: var(--primary-color);
+            margin-right: 12px;
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+
+        .img-container {
+            width: 100%;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        /* 垃圾車時間表專用樣式 */
+        .schedule {
+            background: #fff3e0;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .card { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1><i class="fas fa-home"></i> 居家生活指南</h1>
+        <p>歡迎來到塔斯馬尼亞的家</p>
+    </header>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-motorcycle"></i>
+            <div>
+                車棚下有兩部機車，鑰匙在進客廳左邊玩具廚房桌上，小車的手機架剛好斷掉暫時無法使用。安全帽在車棚後面桌上，都可以使用。桌上也有雨衣。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="機車與鑰匙位置">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-bicycle"></i>
+            <div>
+                車棚下有兩部腳踏車，大的車況比較差，白色小徑好些，皆以補好氣，兩台都可以打到 60psi，車棚下有打氣筒，需要可以拿去用。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="腳踏車與打氣筒">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-table-tennis-paddle-ball"></i>
+            <div>
+                後面黑色桌子上有羽球跟網子也可以用，網子可以綁在機車跟菜園棚架上。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="羽球設備">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-trash-can"></i>
+            <div>
+                垃圾車時間：
+                <div class="schedule">
+                    一四五：約 19:00 抵達<br>
+                    二日：約 19:30-20:30 (有回收)
+                </div>
+                冬天垃圾不用每天倒，可以把一般垃圾集中在車棚下橘色垃圾桶，回收集中在車棚下大紙箱。垃圾車會停在家門口，或走到右邊鄰居家車庫一起倒，會停比較久比較好扔。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="垃圾桶與回收箱位置">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-faucet-drip"></i>
+            <div>
+                院子每天早上 5 點會啟動自動灑水 10 分鐘。若需手動用水，可以打開木平台下面的球閥。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="水管球閥位置">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-seedling"></i>
+            <div>
+                最前面的草莓有可以吃的就採去吃。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="草莓園">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-box-open"></i>
+            <div>
+                這個黑色盆子裡有小網袋可以包草莓。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="黑色盆子位置">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-bug"></i>
+            <div>
+                這個角落的地上、水泥柱、室外機、黑色圍籬上，天氣熱可能有螞蟻，再麻煩幫忙噴點藥。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="螞蟻好發位置">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-cookie-bite"></i>
+            <div>
+                客廳窗台上的點心都可以拿去吃。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="點心位置">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-shopping-bag"></i>
+            <div>
+                垃圾袋放置處。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="垃圾袋位置">
+        </div>
+    </div>
+
+    <div class="card" style="border: 2px solid var(--primary-color);">
+        <div class="badge">重要設備</div>
+        <div class="desc">
+            <i class="fas fa-bolt"></i>
+            <div>
+                4 樓電腦螢幕旁邊下方電箱是熱水器，每天 20:00-24:00 會自動加熱到 65 度。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="電箱位置">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="desc">
+            <i class="fas fa-temperature-high"></i>
+            <div>
+                如果熱水不夠，可以摸一下面板再按最右上角的 <strong>INSTANT</strong> 按鈕，紅點燈號閃爍表示正在強制加熱。
+            </div>
+        </div>
+        <div class="img-container">
+            <img src="" alt="熱水器面板操作">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
