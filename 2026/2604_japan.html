@@ -7,108 +7,101 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-pink: #ffb7c5; /* 櫻花粉 */
-            --sky-blue: #a2d2ff;
-            --snow-white: #ffffff;
-            --text-dark: #2d3436;
-            --accent-green: #55efc4;
+            --cherry-pink: #ffb7c5;
+            --ocean-blue: #0984e3;
+            --nature-green: #27ae60;
+            --fox-orange: #e67e22;
+            --bg-light: #f9f9f9;
         }
 
         body {
             font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
-            background-color: #fdfbfb;
-            color: var(--text-dark);
+            background-color: var(--bg-light);
+            color: #333;
+            line-height: 1.6;
             margin: 0;
             padding: 10px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 10px;
             background: linear-gradient(135deg, #ffb7c5 0%, #ff9a9e 100%);
             color: white;
-            border-radius: 20px;
+            border-radius: 15px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        /* 表格與卡片設計 */
+        /* 桌機表格樣式 */
         .schedule-table {
             width: 100%;
             border-collapse: separate;
-            border-spacing: 0 15px;
+            border-spacing: 0 10px;
+            display: table;
         }
 
         .header-row {
-            background-color: transparent;
+            background-color: #eee;
             font-weight: bold;
-            color: #636e72;
-            text-align: left;
         }
 
         .header-row th {
-            padding: 10px 15px;
-            border-bottom: 2px solid var(--primary-pink);
+            padding: 15px;
+            text-align: left;
+            border-bottom: 3px solid var(--cherry-pink);
         }
 
         .row {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-        }
-
-        .row:hover {
-            transform: scale(1.01);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
         }
 
         .row td {
-            padding: 20px 15px;
+            padding: 15px;
             vertical-align: top;
         }
 
-        /* 欄位寬度控制 */
-        .col-date { width: 100px; font-weight: bold; color: #d63031; }
-        .col-day { width: 60px; text-align: center; }
-        .col-itinerary { line-height: 1.8; }
-        .col-hotel { width: 220px; font-size: 0.9rem; color: #0984e3; }
-
-        .icon-box {
-            color: var(--primary-pink);
+        /* 內容樣式 */
+        .time-badge {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
             margin-right: 5px;
         }
 
-        .highlight {
-            background: #fff9db;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-weight: bold;
-        }
+        .food-info { color: #d63031; font-weight: bold; font-size: 0.95rem; display: block; margin-top: 8px; }
+        .tips { font-size: 0.85rem; color: #636e72; background: #fff9db; padding: 5px 10px; border-radius: 5px; margin-top: 8px; display: inline-block; }
+        
+        .icon-text { display: flex; align-items: flex-start; margin-bottom: 10px; }
+        .icon-text i { margin-right: 10px; margin-top: 5px; width: 20px; text-align: center; }
 
-        .food-tag {
-            color: #e17055;
-            font-size: 0.85rem;
-            display: block;
-            margin-top: 5px;
-        }
-
-        /* 響應式：手機版變成長卡片 */
+        /* 響應式調整 */
         @media (max-width: 768px) {
             .header-row { display: none; }
             .schedule-table, .schedule-table tbody, .schedule-table tr, .schedule-table td {
                 display: block;
                 width: 100%;
             }
-            .row { margin-bottom: 20px; padding: 10px; }
-            .row td { padding: 10px 5px; border: none; }
-            .col-date { display: inline-block; font-size: 1.2rem; }
-            .col-day { display: inline-block; font-size: 1.2rem; }
-            .col-hotel { width: 100%; border-top: 1px dashed #eee; margin-top: 10px; padding-top: 10px !important; }
+            .row { margin-bottom: 20px; }
+            .row td { padding: 15px; border-bottom: 1px solid #eee; }
+            .row td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: block;
+                color: var(--ocean-blue);
+                margin-bottom: 5px;
+                font-size: 1.1rem;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 5px;
+            }
         }
     </style>
 </head>
@@ -116,127 +109,159 @@
 
 <div class="container">
     <header>
-        <h1><i class="fa-solid fa-cherry-blossom"></i> 北海道 · 春櫻與生態之約</h1>
-        <p>2026.04.18 - 04.26 | 札幌 旭川 函館 自駕行</p>
+        <h1><i class="fa-solid fa-map-location-dot"></i> 北海道 9 天 8 夜計畫</h1>
+        <p>2026.04.18 - 04.26 | 札幌 · 旭川 · 函館</p>
     </header>
 
     <table class="schedule-table">
         <thead>
             <tr class="header-row">
-                <th class="col-date">日期</th>
-                <th class="col-day">星期</th>
-                <th class="col-itinerary">行程內容</th>
-                <th class="col-hotel">住宿地點</th>
+                <th style="width: 120px;">日期</th>
+                <th style="width: 80px;">星期</th>
+                <th>行程內容</th>
+                <th style="width: 250px;">住宿地點</th>
             </tr>
         </thead>
         <tbody>
             <tr class="row">
-                <td class="col-date">04.18</td>
-                <td class="col-day">六</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-plane-departure icon-box"></i> 抵達新千歲機場，搭接駁車進市區。晚上先在札幌市區散散步，準備迎接明天的自駕挑戰。<br>
-                    <span class="food-tag"><i class="fa-solid fa-utensils"></i> 晚餐：市區覓食</span>
+                <td data-label="日期">2026-04-18</td>
+                <td data-label="星期">六</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-plane-arrival" style="color:#0984e3;"></i>
+                        <div><span class="time-badge">12:45-17:00</span> 搭酷航 TR 892 飛往新千歲。抵達後去搭 84 號接駁車，大約 15 分鐘就有一班，直接送我們進札幌市中心！</div>
+                    </div>
                 </td>
-                <td class="col-hotel">
+                <td data-label="住宿">
                     <strong>VESSEL INN</strong><br>
-                    <span class="food-tag">必吃！鮭魚卵吃到飽</span>
+                    <span class="food-info"><i class="fa-solid fa-utensils"></i> 招牌鮭魚卵早餐</span>
                 </td>
             </tr>
 
             <tr class="row">
-                <td class="col-date">04.19</td>
-                <td class="col-day">日</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-car icon-box"></i> 一早取車。先去 <span class="highlight">圓山公園、北海道神宮</span> 找尋早櫻蹤影。接著一路向北往美瑛開，在翻土的山坡田野找狐狸蹤跡，去千代田牧場摸摸小動物。<br>
-                    <i class="fa-solid fa-paw icon-box"></i> <small>注意：山坡地是狐狸出沒熱區！</small>
+                <td data-label="日期">2026-04-19</td>
+                <td data-label="星期">日</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-car-side" style="color:var(--nature-green);"></i>
+                        <div>一早去辦租車，先到圓山公園跟北海道神宮看看櫻花開了沒，車子停公園旁的停車場。<br>
+                        <span class="time-badge">10:30-12:00</span> 開往美瑛吃午餐。下午繞小路去千代田牧場展望台或四季彩之丘。</div>
+                    </div>
+                    <div class="tips"><i class="fa-solid fa-paw" style="color:var(--fox-orange);"></i> 注意：翻土的山坡田野是狐狸出沒熱點！</div><br>
+                    <span class="time-badge">17:30</span> 離開，約 <span class="time-badge">18:30</span> 抵達旭川。晚上在外面覓食順便買好隔天的午餐。
                 </td>
-                <td class="col-hotel">
-                    <strong>Hotel Wing / Premier Cabin</strong><br>
-                    <span class="food-tag">旭川站前早餐一級戰區</span>
-                </td>
-            </tr>
-
-            <tr class="row">
-                <td class="col-date">04.20</td>
-                <td class="col-day">一</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-mountain icon-box"></i> 前往大雪旭岳源水公園裝天然礦泉水。中午看準天氣搭 <span class="highlight">旭岳纜車</span>，體驗山頂雪景與地熱噴煙。<br>
-                    <i class="fa-solid fa-deer icon-box"></i> 傍晚回程留意路邊，蝦夷鹿可能會結伴過馬路喔！
-                </td>
-                <td class="col-hotel">
-                    <strong>同前一晚住宿</strong><br>
-                    <span class="food-tag">晚餐可選溫野菜或外帶美食</span>
+                <td data-label="住宿">
+                    <strong>Hotel Wing / Premier Cabin / ART 旭川</strong><br>
+                    <span class="food-info"><i class="fa-solid fa-fish"></i> 甜蝦、干貝、蟹肉早餐</span>
                 </td>
             </tr>
 
             <tr class="row">
-                <td class="col-date">04.21</td>
-                <td class="col-day">二</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-city icon-box"></i> 早上在旭川輕鬆活動，接著悠閒開車返回札幌。下午可以安排市區購物或再次確認櫻花狀況。
+                <td data-label="日期">2026-04-20</td>
+                <td data-label="星期">一</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-mountain" style="color:#74b9ff;"></i>
+                        <div>睡飽吃飽再出發！<span class="time-badge">09:30-10:00</span> 先去大雪旭岳源水公園裝神奇礦泉水。<br>
+                        <span class="time-badge">11:30</span> 抵達旭岳纜車站。記得先進站看即時影像，天氣好才搭纜車上去。<br>
+                        <span class="time-badge">12:00-15:00</span> 走環旭岳步道，看超美的山景、雪景跟地熱噴煙。</div>
+                    </div>
+                    <span class="time-badge">16:00-18:00</span> 開車回旭川。這段路是狐狸跟蝦夷鹿出沒的高峰期！看到鹿要慢行或停車，牠們通常會成群過馬路。<br>
+                    <span class="food-info"><i class="fa-solid fa-bag-shopping"></i> 晚餐可選福龍庵或 AEON 的溫野菜</span>
                 </td>
-                <td class="col-hotel">
+                <td data-label="住宿"><strong>同前一晚住宿地點</strong></td>
+            </tr>
+
+            <tr class="row">
+                <td data-label="日期">2026-04-21</td>
+                <td data-label="星期">二</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-horse" style="color:#8e44ad;"></i>
+                        <div>睡飽後 <span class="time-badge">09:30</span> 離開。去 Clark Horse Garden 喝杯飲料、看看馬。<br>
+                        <span class="time-badge">10:30-12:30</span> 開車回札幌，午餐去市場吃「北のグルメ亭」的海鮮大餐。</div>
+                    </div>
+                    下午就在狸小路逛街補貨囉！
+                </td>
+                <td data-label="住宿">
                     <strong>VESSEL INN</strong><br>
-                    <span class="food-tag">重回鮭魚卵的懷抱</span>
+                    <span class="food-info"><i class="fa-solid fa-utensils"></i> 鮭魚卵早餐</span>
                 </td>
             </tr>
 
             <tr class="row">
-                <td class="col-date">04.22</td>
-                <td class="col-day">三</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-water icon-box"></i> 往南開！去京極湧泉公園接水，到 <span class="highlight">洞爺湖</span> 欣賞湖光山色。搭纜車上 <span class="highlight">有珠山</span> 俯瞰地景。傍晚抵達東室蘭休息。
+                <td data-label="日期">2026-04-22</td>
+                <td data-label="星期">三</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-water" style="color:#00cec9;"></i>
+                        <div><span class="time-badge">08:30</span> 準時出發！<span class="time-badge">10:00</span> 抵達湧泉公園接水。<br>
+                        <span class="time-badge">11:00-11:30</span> 前往洞爺湖，去浮見堂公園跟サイロ展望台拍照看湖。<br>
+                        <span class="time-badge">12:00</span> 在溫泉停車場旁的便利商店解決午餐。<br>
+                        <span class="time-badge">13:30-15:30</span> 搭有珠山纜車，在展望台帶飲料上去看風景。</div>
+                    </div>
+                    <span class="time-badge">16:00-17:00</span> 開往東室蘭，晚餐去 AEON 買想吃的東西回飯店。
                 </td>
-                <td class="col-hotel">
+                <td data-label="住宿">
                     <strong>Dormy Inn 東室蘭</strong><br>
-                    <span class="food-tag">晚間免費拉麵 & 大浴場</span>
+                    <span class="food-info"><i class="fa-solid fa-drumstick-bite"></i> 烤雞肉早餐 & 冰棒</span>
                 </td>
             </tr>
 
             <tr class="row">
-                <td class="col-date">04.23</td>
-                <td class="col-day">四</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-tree icon-box"></i> 前往室蘭看著名的地球岬與白鳥大橋。中午在伊達享用鮮美的壽司午餐，下午一路南下進攻函館！
+                <td data-label="日期">2026-04-23</td>
+                <td data-label="星期">四</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-tree" style="color:#2ecc71;"></i>
+                        <div><span class="time-badge">08:30</span> 離開飯店。<span class="time-badge">09:15-11:00</span> 去登別地獄谷感受煙霧繚繞。<br>
+                        <span class="time-badge">12:00-13:00</span> 午餐吃伊達和さび壽司。</div>
+                    </div>
+                    <span class="time-badge">15:00</span> 到達王子大飯店，泡杯咖啡去池邊小屋放鬆。
+                    <span class="food-info"><i class="fa-solid fa-bacon"></i> 17:30 ひこま豚食堂晚餐</span>
                 </td>
-                <td class="col-hotel">
-                    <strong>函館飯店 (La Vista 或同級)</strong><br>
-                    <span class="food-tag">函館朝市就在旁邊</span>
-                </td>
+                <td data-label="住宿"><strong>函館大沼王子大飯店</strong></td>
             </tr>
 
             <tr class="row">
-                <td class="col-date">04.24</td>
-                <td class="col-day">五</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-map icon-box"></i> 今日重頭戲：<span class="highlight">五稜郭公園</span> 賞櫻！漫步在星形城廓下，接著造訪女子修道院，晚上當然要上函館山看百萬夜景。
+                <td data-label="日期">2026-04-24</td>
+                <td data-label="星期">五</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-binoculars" style="color:#e17055;"></i>
+                        <div><span class="time-badge">08:30</span> 步道探險！在大沼公園找三種啄木鳥跟大型啄木鳥的蹤跡。<br>
+                        午餐吃山川牧場的牛肉便當配牛奶（記得退瓶），再去展望台看風景。<br>
+                        <span class="time-badge">14:30-15:00</span> 開車往五稜郭，逛完後就去飯店 Check-in。</div>
+                    </div>
                 </td>
-                <td class="col-hotel">
-                    <strong>同前一晚住宿</strong>
-                </td>
+                <td data-label="住宿"><strong>Hotel Global View Hakodate</strong></td>
             </tr>
 
             <tr class="row">
-                <td class="col-date">04.25</td>
-                <td class="col-day">六</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-anchor icon-box"></i> 悠閒的函館港灣一日遊：金森紅磚倉庫、元町斜坡散步。再去大沼公園感受湖泊森林氛圍，幸運的話可以遇到啄木鳥喔！
+                <td data-label="日期">2026-04-25</td>
+                <td data-label="星期">六</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-camera" style="color:#6c5ce7;"></i>
+                        <div><span class="time-badge">09:30</span> 走路去金森紅磚倉庫散步。<br>
+                        <span class="time-badge">12:00</span> 漢堡控必吃幸運小丑或回早市吃海鮮。下午回飯店小睡一下。<br>
+                        <span class="time-badge">14:30</span> 去看猴子泡溫泉！隨後逛超市補貨，<span class="time-badge">17:30</span> 享用神奇的在地握壽司。<br>
+                        <span class="time-badge">19:00</span> 函館山看百萬夜景！</div>
+                    </div>
                 </td>
-                <td class="col-hotel">
-                    <strong>同前一晚住宿</strong>
-                </td>
+                <td data-label="住宿"><strong>Hotel Global View Hakodate</strong></td>
             </tr>
 
             <tr class="row">
-                <td class="col-date">04.26</td>
-                <td class="col-day">日</td>
-                <td class="col-itinerary">
-                    <i class="fa-solid fa-suitcase icon-box"></i> 把握最後時間去函館朝市補貨。09:00 準時還車，帶著滿滿的回憶與土產前往機場報到。
+                <td data-label="日期">2026-04-26</td>
+                <td data-label="星期">日</td>
+                <td data-label="行程內容">
+                    <div class="icon-text">
+                        <i class="fa-solid fa-plane-departure" style="color:#d63031;"></i>
+                        <div><span class="time-badge">09:00</span> 準時還車。搭虎航 IT 237 回家囉！</div>
+                    </div>
                 </td>
-                <td class="col-hotel">
-                    <strong>飛機返家</strong><br>
-                    <i class="fa-solid fa-plane-arrival"></i> 12:20 起飛
-                </td>
+                <td data-label="住宿"><strong>溫暖的家</strong></td>
             </tr>
         </tbody>
     </table>
