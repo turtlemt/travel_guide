@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣扁鍬形蟲學校繁殖與飼育教學指南</title>
+    <style>
+        :root {
+            --primary-color: #6d8c54;     /* 森林綠 */
+            --secondary-color: #8b5a2b;   /* 木質棕 */
+            --bg-color: #f4f1ea;          /* 復古米色背景 */
+            --text-color: #332a22;        /* 深木炭色文字 */
+            --white: #ffffff;
+            --warning-bg: #fff3cd;        /* 警告黃 */
+            --warning-border: #ffeba8;
+            --warning-text: #856404;
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 35px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 12px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 25px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #d2b48c;
+            margin: 40px 0;
+        }
+
+        /* 課堂問答區塊 */
+        .qa-section {
+            background-color: #faf8f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid #eadecc;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #b15b12;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .question::before {
+            content: "❓";
+            margin-right: 8px;
+        }
+
+        .answer-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .answer-title::before {
+            content: "💡";
+            margin-right: 8px;
+        }
+
+        /* 警告與安全區塊 */
+        .alert-box {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--warning-border);
+            color: var(--warning-text);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .alert-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .alert-title::before {
+            content: "⚠️";
+            margin-right: 8px;
+        }
+
+        /* 步驟列表 */
+        .steps-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .steps-list li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        .steps-list li .step-number {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 26px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .step-title {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        /* 表格樣式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #d2b48c;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        tr:nth-child(even) {
+            background-color: #faf8f5;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🍂 台灣扁鍬形蟲學校繁殖與飼育指南</h1>
+    <p style="text-align: center; color: #777;">適合國小生命教育與課堂觀察之親師生引導手冊</p>
+
+    <hr>
+
+    <!-- 主題一 -->
+    <div class="qa-section">
+        <div class="question">現在是台灣扁鍬形蟲的繁殖季嗎？如果是以小學生在學校簡單飼育，要如何營造適合繁殖的環境？</div>
+        <div class="answer-title">專家解答與環境營造建議</div>
+        <p><strong>是的，現在（6 月）正是台灣扁鍬的最佳繁殖季！</strong></p>
+        <p>台灣扁鍬在野外的活躍期是每年的 3 月到 11 月，而 6 月到 8 月的夏天則是牠們的繁殖高峰期。只要成蟲已經「過蟄伏」（意思是羽化後睡飽了，已經開始正常吃果凍 1-2 個月以上），現在就是進行繁殖的最佳時機。</p>
+    </div>
+
+    <h2>🏫 學校小教室的「極簡繁殖環境」營造指南</h2>
+    <p>在學校飼育，我們追求<strong>「器材好取得、操作安全、花費少」</strong>。台灣扁鍬形蟲（簡稱台扁）的適應力極強，只要環境佈置得當，不需要複雜的木頭（產木），純木屑或合適的介質就能成功產卵。</p>
+
+    <h3>🛠️ 準備材料（以一組為單位）</h3>
+    <ul>
+        <li><strong>中大型透明塑膠飼育箱</strong>：建議 L 號（長度約 30 公分以上），方便學生從側面觀察。</li>
+        <li><strong>發酵木屑（微粒子微醱酵木屑）</strong>：各大昆蟲寵物店皆有販售。</li>
+        <li><strong>昆蟲果凍、樹皮或攀爬木</strong>：防止甲蟲意外翻倒時無法翻身而體力耗盡死亡。</li>
+        <li><strong>防蠅網或廚房濾網</strong>：夾在箱蓋與箱子中間，防止果蠅和蚋侵入產卵。</li>
+    </ul>
+
+    <h3>📐 產房佈置四步驟</h3>
+    <p>可讓全班學生分工合作，攜手建立甲蟲的家：</p>
+    <ol class="steps-list">
+        <li>
+            <span class="step-number">1</span>
+            <span class="step-title">攪拌與調整木屑水分：</span><br>
+            將發酵木屑倒入大盆子中加水攪拌。水分標準為：<strong>用手用力握緊木屑能成團、放手不會散開，且「不會滴水」</strong>。這就是最適合牠們的 60% 最佳濕度。
+        </li>
+        <li>
+            <span class="step-number">2</span>
+            <span class="step-title">底層木屑「超強力壓實」（核心關鍵）：</span><br>
+            將調好水分的木屑鋪入飼育箱，<strong>厚度約 5-8 公分</strong>。接著讓小朋友用拳頭或壓土工具，<strong>拼命壓到非常緊實</strong>（硬度需接近壓實的泥土）。因為台灣扁鍬的母蟲喜歡將卵產在堅硬、緊實的介質中。
+        </li>
+        <li>
+            <span class="step-number">3</span>
+            <span class="step-title">上層木屑鬆軟鋪平：</span><br>
+            在壓實的底層上方，再撒上 <strong>3-5 公分「鬆軟不用壓」</strong>的相同木屑，作為母蟲挖洞和日常活動的空間。整個箱子的木屑總高度大約佔箱子的 1/2 到 2/3。
+        </li>
+        <li>
+            <span class="step-number">4</span>
+            <span class="step-title">放置生活用品與布置：</span><br>
+            在木屑表面放上果凍固定台（或切開的果凍），並鋪上幾片樹皮或攀爬木。
+        </li>
+    </ol>
+
+    <div class="alert-box">
+        <div class="alert-title">教室飼育的「防家暴」安全守則</div>
+        <p>台灣扁鍬俗稱「蟲界戰鬥民族」，公蟲脾氣暴躁，打架往往往死裡打，甚至會用強壯的大顎把母蟲「夾爆（爆頭或剪成兩半）」。在學校繁殖必須嚴格遵守安全守則：</p>
+        <ul>
+            <li><strong>方案 A（行房監督制，強烈推薦）</strong>：將公蟲與母蟲一同放在鋪有樹皮的小盒子裡，由師生現場觀察。交配時公蟲通常會用大顎「環抱」保護母蟲，交配時間約 10-30 分鐘。<strong>交配完成後，立刻將公蟲抓出來單獨飼養，只放母蟲單獨進入佈置好的產房。</strong></li>
+            <li><strong>方案 B（同居制，不推薦）</strong>：若因課段觀察需要而必須放一起同居，請務必使用橡皮筋或軟乳膠水管將<strong>公蟲的大顎綁起來</strong>，以免發生教室血案慘劇。</li>
+        </ul>
+    </div>
+
+    <h3>🔎 小學生的每日觀察指標</h3>
+    <ul>
+        <li><strong>消失的母蟲</strong>：母蟲進入產房後，通常會鑽進木屑底層開始挖隧道產卵，幾天不見是正常的，提醒學生千萬不要每天去挖掘打擾牠。</li>
+        <li><strong>觀察箱底與側面</strong>：大約 3 到 4 週後，可以引導孩子拿手電筒觀察塑膠箱的底部或側面透明處，常有機會直接看到一顆顆白色、米粒大小的卵，甚至是剛孵化、身體透明的「一齡幼蟲」。</li>
+        <li><strong>環境管理</strong>：飼育箱請放置於教室裡<strong>陰暗、通風、陽光直射不到的角落</strong>。夏天教室若未開冷氣，盡量放在水泥地板等較涼爽處（溫度能維持在 28°C 以下最佳）。</li>
+    </ul>
+
+    <hr>
+
+    <!-- 主題二 -->
+    <div class="qa-section">
+        <div class="question">學生沒有使用木屑，鋪設了腐植土，母蟲一直有向下鑽的跡象，是否表示可能已經受孕？</div>
+        <div class="answer-title">母蟲行為分析與腐植土產房補救對策</div>
+        <p>學生的敏銳觀察力非常棒！母蟲持續向下鑽，確實是一個<strong>非常積極且正向的產卵訊號</strong>。</p>
+        <p>雖然學生使用的是「腐植土」（通常用於兜蟲，如獨角仙），而不是最標準的「發酵木屑」，但因為台灣扁鍬的適應力極強、不挑食，加上牠在分類上屬於「土產型」或「根生型」的鍬形蟲，只要介質夠緊實，母蟲一樣會買單。</p>
+    </div>
+
+    <h3>🔎 為什麼向下鑽代表可能「受孕（已交配）」？</h3>
+    <ol>
+        <li><strong>尋找「安全感」與「壓力」</strong>：未交配的扁鍬母蟲通常會在表面活動與進食果凍，只有當牠帶著受精卵、準備產卵時，體內的本能會促使牠尋找高密度、緊實、安全的地下環境。</li>
+        <li><strong>正在開鑿「產卵室」</strong>：母蟲向下鑽到底部後，如果發現土被壓得很緊，牠會用大顎和腳配合，在土裡咬出一個小空間（產卵室），將尾部塞進去產下一顆卵，並用唾液和土把卵包裹保護起來。</li>
+    </ol>
+    <p>因此，母蟲「一直往下鑽且待在底部」，有極高的機率是<strong>已經交配成功，正在積極尋找產卵位置</strong>。</p>
+
+    <h3>🚨 針對「腐植土產房」的班級微調與提醒</h3>
+    <p>既然學生已經布置完成，<strong>現在千萬不要把土倒出來重新整理</strong>（這會嚴重驚動母蟲），但可以請學生在不打擾母蟲的前提下確認以下兩個細節：</p>
+    
+    <ul>
+        <li><strong>確認土有沒有壓緊？</strong><br>
+        如果學生當初鋪土時只是鬆鬆地倒進去，母蟲雖然會鑽，但可能會因為土太鬆垮而「無法順利固定與產卵」（卵需要緊實的土包裹）。<br>
+        <span style="color: var(--primary-color); font-weight: bold;">➔ 學生的補救方法：</span>如果表面看起來很鬆，可以請學生用手掌<strong>用力將表面的土往下壓實</strong>（避開母蟲鑽下去的那個洞口周邊即可），只要底部密度夠硬，母蟲就能順利生產。
+        </li>
+        <br>
+        <li><strong>水分是否足夠？</strong><br>
+        腐植土通常比木屑更容易乾燥。請學生觀察箱子側面，<strong>土的顏色應該維持深黑咖啡色</strong>；如果開始變成淺咖啡色，代表水分蒸發太快了。<br>
+        <span style="color: var(--primary-color); font-weight: bold;">➔ 學生的補救方法：</span>拿噴霧器在土表適度噴幾下水，讓水分慢慢滲透下去，切記不要直接用倒水的，以免底部積水導致缺氧。
+        </li>
+    </ul>
+
+    <h3>🗓️ 接下來的「課堂觀察課」時間軸規劃</h3>
+    <p>為了確保繁殖成功率，請按耐住學生興奮的心情，排定以下觀察時程：</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>時程階段</th>
+                <th>觀察重點與班級任務</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>第 1-3 週<br>(靜置觀察期)</strong></td>
+                <td>讓母蟲在土中專心工作。引導學生<strong>觀察箱子的側面和底部透明處</strong>。扁鍬很喜歡把卵產在緊貼塑膠壁的地方。大約 2 週後，運氣好的話，可以直接在箱底看到像「米粒」或「小珍珠」般的白綠色卵。</td>
+            </tr>
+            <tr>
+                <td><strong>第 4 週<br>(母蟲退場)</strong></td>
+                <td>如果看到母蟲自己爬回土表，且開始大量進食果凍，代表牠大致生完了。這時老師可以指導學生先把母蟲抓出來單獨飼養休息，讓土裡的卵繼續留在原箱孵化。</td>
+            </tr>
+            <tr>
+                <td><strong>第 6-8 週<br>(開挖驚喜)</strong></td>
+                <td>這是學生最期待的時刻！等過了一個半月到兩個月，卵都已經孵化成一齡或二齡的白色幼蟲（雞母蟲）後，全班一起把土倒在大臉盆裡「尋寶開挖」。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p style="background-color: #f1f8ff; padding: 15px; border-radius: 6px; border-left: 4px solid #007bff;">
+        <strong>💡 老師的叮嚀：</strong>在卵的階段如果直接開挖，卵非常脆弱，很容易被學生不小心捏爆，或因為接觸空氣環境改變而發霉。讓幼蟲在土裡安全孵化長大一點再進行開挖，是成功率最高、也能帶給孩子最多成就感的生命教育體驗！
+    </p>
+
+</div>
+
+</body>
+</html>
