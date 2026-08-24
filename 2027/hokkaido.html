@@ -149,20 +149,43 @@
     padding: 24px;
   }
 
-  .img-container {
-    width: 100%;
-    height: 260px;
+  /* Image Gallery Grid */
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .gallery-item {
+    position: relative;
+    height: 180px;
     border-radius: 12px;
     overflow: hidden;
-    margin-bottom: 20px;
     background-color: #e2e8f0;
   }
 
-  .day-image {
+  .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
   }
 
   .section-block {
@@ -260,8 +283,15 @@
           <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-18 (五)</span>
         </div>
         <div class="day-content">
-          <div class="img-container">
-            <img class="day-image" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="飛行出發">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="國際航班出發">
+              <div class="gallery-caption">松山/羽田/釧路 飛行出發</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=600&q=80" alt="釧路王子大飯店夜景">
+              <div class="gallery-caption">釧路市區與港灣夜景</div>
+            </div>
           </div>
           <div class="section-block">
             <div class="section-title"><i class="fa-solid fa-plane-departure"></i> 每日行程重點</div>
@@ -297,15 +327,26 @@ HND-KUH JAL JL 545 (17:10 - 19:00) 至國內航廈午餐與逛逛，轉機前往
           <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-19 (六)</span>
         </div>
         <div class="day-content">
-          <div class="img-container">
-            <img class="day-image" src="https://images.unsplash.com/photo-1574063413132-355dbfd83e0c?auto=format&fit=crop&w=800&q=80" alt="野生海獺觀察">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1574063413132-355dbfd83e0c?auto=format&fit=crop&w=600&q=80" alt="霧多布岬野生海獺">
+              <div class="gallery-caption">霧多布岬野生海獺生態</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="岬角步道海岸">
+              <div class="gallery-caption">霧多布海岸與角嘴海雀觀察點</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="根室花丸壽司">
+              <div class="gallery-caption">根室花丸總店新鮮壽司</div>
+            </div>
           </div>
           <div class="section-block">
             <div class="section-title"><i class="fa-solid fa-binoculars"></i> 每日行程重點</div>
             <div class="section-text">
 【霧多布岬】08:00-09:30 開車前往霧多布岬，於岬角步道觀察野生海獺（用望遠鏡觀察）及育兒的港海豹。注意崖壁上的珍稀鳥類「角嘴海雀」（6月繁殖季嘴喙轉為鮮艷橘紅色）。
 【霧多布濕原】11:00-12:30 至遊客中心或木棧道觀察育雛期的丹頂鶴（母鳥極敏感，請小心觀察）。
-【美食美食朝聖】14:00 迴轉壽司 根室花丸 根室店（傳說總店，離峰時段避開排隊）。
+【美食朝聖】14:00 迴轉壽司 根室花丸 根室店（傳說總店，離峰時段避開排隊）。
 【羅臼溫泉】15:00-17:00 開車至羅臼入住「陶灯りの宿」，享受溫泉。
             </div>
           </div>
@@ -335,8 +376,19 @@ HND-KUH JAL JL 545 (17:10 - 19:00) 至國內航廈午餐與逛逛，轉機前往
           <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-20 (日)</span>
         </div>
         <div class="day-content">
-          <div class="img-container">
-            <img class="day-image" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="羅臼出海尋找虎鯨">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="羅臼出海賞鯨尋找虎鯨">
+              <div class="gallery-caption">羅臼 Nature Cruise 賞鯨船</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1568430460464-52368961312d?auto=format&fit=crop&w=600&q=80" alt="虎鯨/殺人鯨蹤跡">
+              <div class="gallery-caption">根室海峽野生虎鯨(殺人鯨)</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1551085254-e96b210df58a?auto=format&fit=crop&w=600&q=80" alt="毛腿漁鴞夜間觀察">
+              <div class="gallery-caption">毛腿漁鴞 (Blakiston's Fish Owl)</div>
+            </div>
           </div>
           <div class="section-block">
             <div class="section-title"><i class="fa-solid fa-ship"></i> 每日行程重點</div>
@@ -373,8 +425,19 @@ HND-KUH JAL JL 545 (17:10 - 19:00) 至國內航廈午餐與逛逛，轉機前往
           <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-21 (一)</span>
         </div>
         <div class="day-content">
-          <div class="img-container">
-            <img class="day-image" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="知床步道健行">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="知床山脈海岸景色">
+              <div class="gallery-caption">知床半島壯麗山海景色</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="乙女淚瀑布自然步道">
+              <div class="gallery-caption">乙女淚木棧道健行</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="WOOT BURGER漢堡美食">
+              <div class="gallery-caption">知床熱門美式 WOOT BURGER</div>
+            </div>
           </div>
           <div class="section-block">
             <div class="section-title"><i class="fa-solid fa-person-hiking"></i> 每日行程重點</div>
@@ -412,8 +475,19 @@ HND-KUH JAL JL 545 (17:10 - 19:00) 至國內航廈午餐與逛逛，轉機前往
           <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-22 (二)</span>
         </div>
         <div class="day-content">
-          <div class="img-container">
-            <img class="day-image" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="知床五湖自然美景色">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="知床五湖湖光山色">
+              <div class="gallery-caption">知床五湖湖光山色倒影</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1511497584788-8767611136f6?auto=format&fit=crop&w=600&q=80" alt="知床五湖高架木棧道">
+              <div class="gallery-caption">一湖高架木棧道漫步</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=600&q=80" alt="成吉思汗烤羊肉">
+              <div class="gallery-caption">北海道ジンギスカン 燒肉</div>
+            </div>
           </div>
           <div class="section-block">
             <div class="section-title"><i class="fa-solid fa-tree"></i> 每日行程重點</div>
@@ -449,8 +523,19 @@ HND-KUH JAL JL 545 (17:10 - 19:00) 至國內航廈午餐與逛逛，轉機前往
           <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-23 (三)</span>
         </div>
         <div class="day-content">
-          <div class="img-container">
-            <img class="day-image" src="https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&w=800&q=80" alt="野生蝦夷鹿與野生動物">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&w=600&q=80" alt="野生蝦夷鹿群">
+              <div class="gallery-caption">野付半島野生蝦夷鹿群</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=600&q=80" alt="野生狐狸蹤跡">
+              <div class="gallery-caption">野付半島北海道赤狐</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=600&q=80" alt="なごやか亭迴轉壽司">
+              <div class="gallery-caption">釧路超人氣 なごやか亭 壽司</div>
+            </div>
           </div>
           <div class="section-block">
             <div class="section-title"><i class="fa-solid fa-fish"></i> 每日行程重點</div>
@@ -487,8 +572,15 @@ HND-KUH JAL JL 545 (17:10 - 19:00) 至國內航廈午餐與逛逛，轉機前往
           <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-24 (四)</span>
         </div>
         <div class="day-content">
-          <div class="img-container">
-            <img class="day-image" src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80" alt="東京繁華市區夜景">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80" alt="東京市區景色">
+              <div class="gallery-caption">返回東京市區繁華夜景</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=600&q=80" alt="東京美食與購物">
+              <div class="gallery-caption">東京市區自由觀光與美食</div>
+            </div>
           </div>
           <div class="section-block">
             <div class="section-title"><i class="fa-solid fa-city"></i> 每日行程重點</div>
@@ -524,6 +616,12 @@ HND-KUH JAL JL 545 (17:10 - 19:00) 至國內航廈午餐與逛逛，轉機前往
           <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-25 (五)</span>
         </div>
         <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="返航台北">
+              <div class="gallery-caption">羽田返航松山 圓滿結束旅程</div>
+            </div>
+          </div>
           <div class="section-block">
             <div class="section-title"><i class="fa-solid fa-plane-arrival"></i> 每日行程重點</div>
             <div class="section-text">
