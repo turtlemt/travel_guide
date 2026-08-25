@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027 北海道直飛自駕生態之旅</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #0284c7;
+            --accent-color: #059669;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            padding-bottom: 3rem;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: #93c5fd;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
+
+        .badge {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.5rem;
+        }
+
+        th, td {
+            padding: 0.85rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .day-title {
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin-top: 0.75rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .img-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: #f1f5f9;
+            border: 2px dashed #cbd5e1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            margin: 1rem 0 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.6rem; }
+            .card { padding: 1rem; }
+            th, td { padding: 0.6rem; font-size: 0.875rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>北海道直飛自駕生態之旅</h1>
+            <p>桃園 (TPE) ↔ 新千歲 (CTS) | 7天6夜行程規劃</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- 航班資訊 -->
+        <section class="card">
+            <div class="card-header">
+                <h2>✈️ 航班資訊 (Flight)</h2>
+                <span class="badge">直飛航班</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>航程</th>
+                        <th>航班編號</th>
+                        <th>起飛時間</th>
+                        <th>抵達時間</th>
+                        <th>備註</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>去程</strong> TPE ➔ CTS</td>
+                        <td>星宇/華航（預計）</td>
+                        <td>08:30 桃園 T1/T2</td>
+                        <td>13:15 新千歲 T2</td>
+                        <td>直飛約 3 hrs 45 mins</td>
+                    </tr>
+                    <tr>
+                        <td><strong>回程</strong> CTS ➔ TPE</td>
+                        <td>星宇/華航（預計）</td>
+                        <td>14:30 新千歲 T2</td>
+                        <td>17:40 桃園 T1/T2</td>
+                        <td>直飛約 4 hrs 10 mins</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 行程規劃 -->
+        <section class="card">
+            <div class="card-header">
+                <h2>🗓️每日行程規劃 (Itinerary)</h2>
+                <span class="badge">自駕生態線</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">天數 / 日期</th>
+                        <th style="width: 25%;">主要地點</th>
+                        <th>行程重點與生態觀察</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="day-title">Day 1</span></td>
+                        <td>桃園 ➔ 新千歲 ➔ 支笏湖</td>
+                        <td>抵達新千歲機場後取車，前往支笏湖。漫步湖畔觀察水鳥與森林植被，入住支笏湖溫泉。
+                            <div class="img-placeholder">[圖片位置：支笏湖畔夕陽與自駕車輛]</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-title">Day 2</span></td>
+                        <td>支笏湖 ➔ 旭川 / 旭岳</td>
+                        <td>沿道央自動車道北上，造訪大雪山國立公園山麓地區，沿途尋訪黑啄木鳥與野鳥蹤跡。
+                            <div class="img-placeholder">[圖片位置：旭岳山麓森林與野生鳥類]</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-title">Day 3</span></td>
+                        <td>旭川 ➔ 美瑛 ➔ 富良野</td>
+                        <td>美瑛丘陵環線自駕，觀察丘陵林地間的北狐（Ezo Red Fox），享受北海道縱谷風光。
+                            <div class="img-placeholder">[圖片位置：美瑛丘陵與野生北狐]</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-title">Day 4</span></td>
+                        <td>富良野 ➔ 帶廣 / 十勝</td>
+                        <td>穿越狩勝峠前往十勝平原，造訪森林公園探尋蝦夷栗鼠與野鳥，晚上享用十勝植物性溫泉。
+                            <div class="img-placeholder">[圖片位置：十勝森林公園生態紀錄]</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-title">Day 5</span></td>
+                        <td>十勝 ➔ 苫小牧 / 惠庭</td>
+                        <td>西行返回道央地區，造訪ウトナイ湖（Utunai湖）野生鳥類保護區，紀錄遷徙水鳥。
+                            <div class="img-placeholder">[圖片位置：Utunai湖鳥類保護區]</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-title">Day 6</span></td>
+                        <td>惠庭 ➔ 札幌市區</td>
+                        <td>造訪圓山公園與北海道神宮森林步道，尋找啄木鳥蹤跡；下午進行市區補給與租車還車準備。
+                            <div class="img-placeholder">[圖片位置：圓山公園森林步道]</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="day-title">Day 7</span></td>
+                        <td>札幌 ➔ 新千歲 ➔ 桃園</td>
+                        <td>前往新千歲機場完成還車手續，於機場免稅店採買當地農特產品，搭乘直飛航班返台。
+                            <div class="img-placeholder">[圖片位置：新千歲機場還車點與返航]</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="grid-2">
+            <!-- 預算與帳目 -->
+            <section class="card">
+                <div class="card-header">
+                    <h2>💰 預算與預估費用 (Budget)</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>預估金額 (TWD)</th>
+                            <th>說明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>直飛機票</td>
+                            <td>$22,000 /人</td>
+                            <td>來回含托運行李</td>
+                        </tr>
+                        <tr>
+                            <td>租車與油資</td>
+                            <td>$6,500 /人</td>
+                            <td>含免責險與 HEP 高速過路費</td>
+                        </tr>
+                        <tr>
+                            <td>住宿費用</td>
+                            <td>$18,000 /人</td>
+                            <td>6夜（含2夜溫泉飯店）</td>
+                        </tr>
+                        <tr>
+                            <td>餐飲與門票</td>
+                            <td>$10,500 /人</td>
+                            <td>當地美食與生態園區入場費</td>
+                        </tr>
+                        <tr>
+                            <td><strong>總計預估</strong></td>
+                            <td><strong>$57,000 /人</strong></td>
+                            <td>不含個人購物預算</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- 團員與備忘 -->
+            <section class="card">
+                <div class="card-header">
+                    <h2>👥 團員與隨行準備 (Info)</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>類別</th>
+                            <th>詳細內容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>團員名單</strong></td>
+                            <td>共 3 人（自駕一台 5 人座 SUV）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>網路 SIM 卡</strong></td>
+                            <td>原生卡 eSIM 吃到飽（含通話功能備用）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>旅遊保險</strong></td>
+                            <td>海外突發疾病 + 申根高額傷害險 + 租車自負額險</td>
+                        </tr>
+                        <tr>
+                            <td><strong>必備證件</strong></td>
+                            <td>護照正本、台灣駕照正本、日文駕照譯本、信用卡</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="highlight-box">
+                    💡 <strong>生態攝影提示：</strong> 請隨身攜帶長焦鏡頭（預備 300mm 以上），並注意保持與野生北狐及野生鳥類之安全距離，切勿餵食。
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+</body>
+</html>
