@@ -1,356 +1,654 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2027 北海道直飛自駕生態之旅</title>
-    <style>
-        :root {
-            --primary-color: #1e3a8a;
-            --secondary-color: #0284c7;
-            --accent-color: #059669;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北海道道東野生動物探索之旅 8天7夜</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-color: #1a4d3e;
+    --secondary-color: #2c6e49;
+    --accent-color: #d97706;
+    --bg-color: #f4f7f5;
+    --card-bg: #ffffff;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    --border-color: #e2e8f0;
+  }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-color);
-            padding-bottom: 3rem;
-        }
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 50px;
+  }
 
-        header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-            margin-bottom: 2rem;
-        }
+  /* Hero Banner */
+  .hero-banner {
+    background: linear-gradient(rgba(26, 77, 62, 0.8), rgba(26, 77, 62, 0.85)), url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 20px 50px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
 
-        header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-        }
+  .hero-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
 
-        header p {
-            color: #93c5fd;
-            font-size: 1.1rem;
-        }
+  .hero-banner p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+  }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+  .hero-tags {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
 
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border: 1px solid var(--border-color);
-        }
+  .hero-tag {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
 
-        .card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0.75rem;
-            margin-bottom: 1.25rem;
-        }
+  /* Main Container */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
-        h2 {
-            color: var(--primary-color);
-            font-size: 1.4rem;
-        }
+  /* Budget Summary Card */
+  .summary-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
-        .badge {
-            background-color: #e0f2fe;
-            color: #0369a1;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
+  .summary-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 0.5rem;
-        }
+  .summary-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+  }
 
-        th, td {
-            padding: 0.85rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
+  /* Day Cards */
+  .day-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border-color);
+  }
 
-        th {
-            background-color: #f1f5f9;
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
+  .day-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+  }
 
-        tr:last-child td {
-            border-bottom: none;
-        }
+  .day-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
+  .day-badge {
+    background: var(--accent-color);
+    color: white;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
 
-        .day-title {
-            font-weight: bold;
-            color: var(--secondary-color);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+  .day-date {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
 
-        .highlight-box {
-            background-color: #f0fdf4;
-            border-left: 4px solid var(--accent-color);
-            padding: 1rem;
-            margin-top: 0.75rem;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95rem;
-        }
+  .day-content {
+    padding: 24px;
+  }
 
-        .img-placeholder {
-            width: 100%;
-            height: 180px;
-            background-color: #f1f5f9;
-            border: 2px dashed #cbd5e1;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            margin: 1rem 0 0.5rem 0;
-            font-size: 0.9rem;
-        }
+  /* Image Gallery Grid */
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
 
-        @media (max-width: 640px) {
-            header h1 { font-size: 1.6rem; }
-            .card { padding: 1rem; }
-            th, td { padding: 0.6rem; font-size: 0.875rem; }
-            .grid-2 { grid-template-columns: 1fr; }
-        }
-    </style>
+  .gallery-item {
+    position: relative;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #e2e8f0;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .section-block {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    white-space: pre-line;
+    padding-left: 26px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color);
+  }
+
+  .info-item {
+    background: #f8faf9;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .info-item i {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+  }
+
+  .info-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .info-val {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px 10px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>北海道直飛自駕生態之旅</h1>
-            <p>桃園 (TPE) ↔ 新千歲 (CTS) | 7天6夜行程規劃</p>
+  <div class="hero-banner">
+    <h1><i class="fa-solid fa-compass"></i> 北海道道東野生動物攝影 8天7夜</h1>
+    <p>海獺 ‧ 虎鯨 ‧ 毛腿漁鴞 ‧ 丹頂鶴 ‧ 蝦夷鹿 野生動植物觀察之旅</p>
+    <div class="hero-tags">
+      <span class="hero-tag"><i class="fa-solid fa-calendar-days"></i> 2027/06/18 - 06/25</span>
+      <span class="hero-tag"><i class="fa-solid fa-car"></i> 全程自駕探索</span>
+      <span class="hero-tag"><i class="fa-solid fa-camera"></i> 自然生態攝影</span>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="summary-card">
+      <div>
+        <div class="summary-title"><i class="fa-solid fa-wallet"></i> 每人預算估計 (住宿與交通基底)</div>
+        <div style="font-size:0.85rem; color:var(--text-muted);">詳細個人機票與餐食以實際消費為準</div>
+      </div>
+      <div class="summary-price">約 NT$ 45,000 / 人</div>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Day 1 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 1</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-18 (五)</span>
         </div>
-    </header>
-
-    <main class="container">
-
-        <!-- 航班資訊 -->
-        <section class="card">
-            <div class="card-header">
-                <h2>✈️ 航班資訊 (Flight)</h2>
-                <span class="badge">直飛航班</span>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="國際航班出發">
+              <div class="gallery-caption">松山/羽田/釧路 飛行出發</div>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>航程</th>
-                        <th>航班編號</th>
-                        <th>起飛時間</th>
-                        <th>抵達時間</th>
-                        <th>備註</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>去程</strong> TPE ➔ CTS</td>
-                        <td>星宇/華航（預計）</td>
-                        <td>08:30 桃園 T1/T2</td>
-                        <td>13:15 新千歲 T2</td>
-                        <td>直飛約 3 hrs 45 mins</td>
-                    </tr>
-                    <tr>
-                        <td><strong>回程</strong> CTS ➔ TPE</td>
-                        <td>星宇/華航（預計）</td>
-                        <td>14:30 新千歲 T2</td>
-                        <td>17:40 桃園 T1/T2</td>
-                        <td>直飛約 4 hrs 10 mins</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- 行程規劃 -->
-        <section class="card">
-            <div class="card-header">
-                <h2>🗓️每日行程規劃 (Itinerary)</h2>
-                <span class="badge">自駕生態線</span>
+            <div class="gallery-item">
+              <img src="https://www.princehotels.co.jp/kushiro/images/kushiro_20240401.jpg?auto=format&fit=crop&w=600&q=80" alt="釧路王子大飯店夜景">
+              <div class="gallery-caption">釧路市區與港灣夜景</div>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 15%;">天數 / 日期</th>
-                        <th style="width: 25%;">主要地點</th>
-                        <th>行程重點與生態觀察</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="day-title">Day 1</span></td>
-                        <td>桃園 ➔ 新千歲 ➔ 支笏湖</td>
-                        <td>抵達新千歲機場後取車，前往支笏湖。漫步湖畔觀察水鳥與森林植被，入住支笏湖溫泉。
-                            <div class="img-placeholder">[圖片位置：支笏湖畔夕陽與自駕車輛]</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="day-title">Day 2</span></td>
-                        <td>支笏湖 ➔ 旭川 / 旭岳</td>
-                        <td>沿道央自動車道北上，造訪大雪山國立公園山麓地區，沿途尋訪黑啄木鳥與野鳥蹤跡。
-                            <div class="img-placeholder">[圖片位置：旭岳山麓森林與野生鳥類]</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="day-title">Day 3</span></td>
-                        <td>旭川 ➔ 美瑛 ➔ 富良野</td>
-                        <td>美瑛丘陵環線自駕，觀察丘陵林地間的北狐（Ezo Red Fox），享受北海道縱谷風光。
-                            <div class="img-placeholder">[圖片位置：美瑛丘陵與野生北狐]</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="day-title">Day 4</span></td>
-                        <td>富良野 ➔ 帶廣 / 十勝</td>
-                        <td>穿越狩勝峠前往十勝平原，造訪森林公園探尋蝦夷栗鼠與野鳥，晚上享用十勝植物性溫泉。
-                            <div class="img-placeholder">[圖片位置：十勝森林公園生態紀錄]</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="day-title">Day 5</span></td>
-                        <td>十勝 ➔ 苫小牧 / 惠庭</td>
-                        <td>西行返回道央地區，造訪ウトナイ湖（Utunai湖）野生鳥類保護區，紀錄遷徙水鳥。
-                            <div class="img-placeholder">[圖片位置：Utunai湖鳥類保護區]</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="day-title">Day 6</span></td>
-                        <td>惠庭 ➔ 札幌市區</td>
-                        <td>造訪圓山公園與北海道神宮森林步道，尋找啄木鳥蹤跡；下午進行市區補給與租車還車準備。
-                            <div class="img-placeholder">[圖片位置：圓山公園森林步道]</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><span class="day-title">Day 7</span></td>
-                        <td>札幌 ➔ 新千歲 ➔ 桃園</td>
-                        <td>前往新千歲機場完成還車手續，於機場免稅店採買當地農特產品，搭乘直飛航班返台。
-                            <div class="img-placeholder">[圖片位置：新千歲機場還車點與返航]</div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <div class="grid-2">
-            <!-- 預算與帳目 -->
-            <section class="card">
-                <div class="card-header">
-                    <h2>💰 預算與預估費用 (Budget)</h2>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>項目</th>
-                            <th>預估金額 (TWD)</th>
-                            <th>說明</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>直飛機票</td>
-                            <td>$22,000 /人</td>
-                            <td>來回含托運行李</td>
-                        </tr>
-                        <tr>
-                            <td>租車與油資</td>
-                            <td>$6,500 /人</td>
-                            <td>含免責險與 HEP 高速過路費</td>
-                        </tr>
-                        <tr>
-                            <td>住宿費用</td>
-                            <td>$18,000 /人</td>
-                            <td>6夜（含2夜溫泉飯店）</td>
-                        </tr>
-                        <tr>
-                            <td>餐飲與門票</td>
-                            <td>$10,500 /人</td>
-                            <td>當地美食與生態園區入場費</td>
-                        </tr>
-                        <tr>
-                            <td><strong>總計預估</strong></td>
-                            <td><strong>$57,000 /人</strong></td>
-                            <td>不含個人購物預算</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- 團員與備忘 -->
-            <section class="card">
-                <div class="card-header">
-                    <h2>👥 團員與隨行準備 (Info)</h2>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>類別</th>
-                            <th>詳細內容</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>團員名單</strong></td>
-                            <td>共 3 人（自駕一台 5 人座 SUV）</td>
-                        </tr>
-                        <tr>
-                            <td><strong>網路 SIM 卡</strong></td>
-                            <td>原生卡 eSIM 吃到飽（含通話功能備用）</td>
-                        </tr>
-                        <tr>
-                            <td><strong>旅遊保險</strong></td>
-                            <td>海外突發疾病 + 申根高額傷害險 + 租車自負額險</td>
-                        </tr>
-                        <tr>
-                            <td><strong>必備證件</strong></td>
-                            <td>護照正本、台灣駕照正本、日文駕照譯本、信用卡</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="highlight-box">
-                    💡 <strong>生態攝影提示：</strong> 請隨身攜帶長焦鏡頭（預備 300mm 以上），並注意保持與野生北狐及野生鳥類之安全距離，切勿餵食。
-                </div>
-            </section>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-plane-departure"></i> 每日行程重點</div>
+            <div class="section-text">
+虎航 TPE-CTS IT 234 0620-1055
+一早搭機至札幌新千歲機場，於機場旁租車公司租車
+開車40分鐘，約1300抵達夕張市區，FISHERMAN BROTHERS 是當地特色漢堡店，吃完後去旁邊買特產哈密瓜霜淇淋
+開車兩小時至超市補貨，買晚餐及隔天晚餐
+晚上入住 里士滿酒店帶廣站前
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">里士滿酒店帶廣站前</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：早餐自理 | 午：FISHERMAN BROTHERS | 晚：超市</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-    </main>
+      <!-- Day 2 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 2</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-19 (六)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://cdn-opinion.cw.com.tw/article/202406/article-666a8d868b9cc.jpg?auto=format&fit=crop&w=600&q=80" alt="霧多布岬野生海獺">
+              <div class="gallery-caption">霧多布岬野生海獺生態</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://www.visit-hokkaido.jp/lsc/upfile/articleDetail/0000/1176/1176_1_m.jpg?auto=format&fit=crop&w=600&q=80" alt="濕地丹頂鶴">
+              <div class="gallery-caption">濕地丹頂鶴</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://i0.wp.com/meishijournal.com/wp-content/uploads/2023/06/20250226141836_0_957ce8.jpg?auto=format&fit=crop&w=600&q=80" alt="根室花丸壽司">
+              <div class="gallery-caption">根室花丸總店新鮮壽司</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-binoculars"></i> 每日行程重點</div>
+            <div class="section-text">
+早上要看海獺，如果天氣好就盡快出發
+如果天氣普普，飯店有浮誇早餐，慢慢吃完再出發
+0800-1100 開車至 霧多布岬，當地有野生海獺可以拍攝
+僅能在岬角步道上用望遠鏡觀察，沒有道路可以接近，同時可搜尋育兒的港海豹
+務必注意崖壁上的角嘴海雀，道東極度珍稀的鳥類，6 月繁殖季時，嘴喙會轉為鮮豔的橘紅色。
+1300-1400 開車至迴轉壽司 根室花丸 根室店，必須朝聖的傳說總店，安排在下午詭異時段來訪以避免排隊
+1500-1630 開車至野付半島，這裡有大量蝦夷鹿，也有機會看到狐狸，最裡面的野鳥観察舎，可以看到一些候鳥
+1800-1900 開車至羅臼入住陶灯りの宿，離市區5分鐘車程，但有提供溫泉
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">陶灯りの宿</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：根室花丸 | 晚：超市</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 3</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-20 (日)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://www.e-shiretoko.com/eswp/wp-content/uploads/eg_img.jpg?auto=format&fit=crop&w=600&q=80" alt="羅臼出海賞鯨尋找虎鯨">
+              <div class="gallery-caption">羅臼 Nature Cruise 賞鯨船</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://www.e-shiretoko.com/eswp/wp-content/themes/staffTemplate/imgs/animals/index/animals1_thum.jpg?auto=format&fit=crop&w=600&q=80" alt="虎鯨/殺人鯨蹤跡">
+              <div class="gallery-caption">根室海峽野生虎鯨(殺人鯨)</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://www.nippon.com/cn/ncommon/contents/images/66062/66062.jpg?auto=format&fit=crop&w=600&q=80" alt="毛腿漁鴞夜間觀察">
+              <div class="gallery-caption">毛腿漁鴞 (Blakiston's Fish Owl)</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-ship"></i> 每日行程重點</div>
+            <div class="section-text">
+早上搭乘 Nature Cruise 賞鯨船尋找殺人鯨
+午餐 純の番屋 海鮮定食
+下午 クジラの見える丘公園，一個看不到鯨豚的鯨豚展望台。稲荷神社，一個迷你鳥居
+日本最北東突端地，日本最東北邊的盡頭，除了打卡其實沒有太大意義，但來都來了
+傍晚 Shima-fukurou 毛腿漁鴞（Blakiston's Fish Owl），全世界體型最大、極度瀕危的貓頭鷹，北海道剩200隻
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">陶灯りの宿</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：純の番屋 | 晚：便利商店/泡麵庫存</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 4</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-21 (一)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://waknot.com/wp-content/uploads/2025/08/30440968_s.jpg?auto=format&fit=crop&w=600&q=80" alt="稲荷神社">
+              <div class="gallery-caption">稲荷神社</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://g.udn.com.tw/upfiles/B_RA/rabenta/PSN_PHOTO/066/f_27084066_1.jpg?auto=format&fit=crop&w=600&q=80" alt="乙女淚瀑布自然步道">
+              <div class="gallery-caption">乙女淚木棧道健行</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="WOOT BURGER漢堡美食">
+              <div class="gallery-caption">知床熱門美式 WOOT BURGER</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-person-hiking"></i> 每日行程重點</div>
+            <div class="section-text">
+早上退房，搭乘 Nature Cruise 賞鯨船尋找殺人鯨
+中午搭完船開車一小時至 知床 隨便午餐
+下午至 知床自然中心 走乙女淚 木棧道來回約2小時
+晚上住宿レンブラントリゾート知床 
+晚餐據說很強的 WOOT BURGER 轉換下口味
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">レンブラントリゾート知床</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：便利商店亂亂吃 | 晚：WOOT BURGER</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 5</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-22 (二)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://www.visit-hokkaido.jp/lsc/upfile/spot/0001/0404/10404_1_l.jpg?auto=format&fit=crop&w=600&q=80" alt="知床五湖湖光山色">
+              <div class="gallery-caption">知床五湖湖光山色倒影</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://www.visit-hokkaido.jp/lsc/upfile/spot/0001/0404/10404_6_l.jpg?auto=format&fit=crop&w=600&q=80" alt="知床五湖高架木棧道">
+              <div class="gallery-caption">一湖高架木棧道漫步</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://masajin.jp/_src/30/sl-01.jpg?v=1749464740491?auto=format&fit=crop&w=600&q=80" alt="成吉思汗烤羊肉">
+              <div class="gallery-caption">北海道ジンギスカン 燒肉</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-tree"></i> 每日行程重點</div>
+            <div class="section-text">
+盡早出發入園，比較會有動物
+知床五湖，走一湖木棧道來回1.5小時
+五湖地面環線須事先申請，6000日圓，來回5小時
+若要待比較久則攜帶乾糧中午使用
+如果人很少，可開車至道路盡頭知床大橋，路上的神之水瀑布可停下拍照
+若不繼續開回到飯店，下午可以去三角岩看奇怪石頭，或夕陽台展望台看夕陽
+晚餐可以吃知名燒肉餐廳 北海道ジンギスカン
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">レンブラントリゾート知床</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：住宿便利商店 | 晚：晚餐北海道ジンギスカン</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 6</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-23 (三)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1484406566174-9da000fda645?auto=format&fit=crop&w=600&q=80" alt="野生蝦夷鹿群">
+              <div class="gallery-caption">野付半島野生蝦夷鹿群</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=600&q=80" alt="野生狐狸蹤跡">
+              <div class="gallery-caption">野付半島北海道赤狐</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://ja.kushiro-lakeakan.com/kushiroakanwp/wp-content/uploads/507e70ac223183fde3781a6c88e76364-790x526.jpg?auto=format&fit=crop&w=600&q=80" alt="なごやか亭迴轉壽司">
+              <div class="gallery-caption">釧路超人氣 なごやか亭 壽司</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-fish"></i> 每日行程重點</div>
+            <div class="section-text">
+0830 離開飯店，開車2小時美幌峠欣賞美景(若天氣好)
+至北見午餐，伊予製麺 北見店
+若天氣好可至大雪山，天氣不好就直接至旭川
+旭川附近可以去 オオカミ犬の森 看野狼，或者去 クラークホースガーデン 看馬
+晚上入住 KOKO HOTEL
+晚餐可吃成吉思汗或超市
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">KOKO HOTEL</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：伊予製麺 | 晚：成吉思汗大黑屋</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 7 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 7</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-24 (四)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80" alt="東京市區景色">
+              <div class="gallery-caption">返回東京市區繁華夜景</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=600&q=80" alt="東京美食與購物">
+              <div class="gallery-caption">東京市區自由觀光與美食</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-city"></i> 每日行程重點</div>
+            <div class="section-text">
+開車至札幌，市區觀光
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">HOTEL ABEST SAPPORO</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：自理 | 晚：自理</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 8 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 8</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-06-25 (五)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="返航台北">
+              <div class="gallery-caption">羽田返航松山 圓滿結束旅程</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-plane-arrival"></i> 每日行程重點</div>
+            <div class="section-text">
+虎航 CTS-TPE IT 235 1155-1535 回到桃園機場
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <p>北海道道東生態探索旅程 ‧ Itinerary Created with Care</p>
+  </footer>
 
 </body>
 </html>
