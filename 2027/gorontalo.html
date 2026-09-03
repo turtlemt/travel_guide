@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>印尼哥倫打洛海洋潛水之旅 8天7夜</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-color: #0f4c81;
+    --secondary-color: #1b6ca8;
+    --accent-color: #00a896;
+    --bg-color: #f0f4f8;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding-bottom: 50px;
+  }
+
+  /* Hero Banner */
+  .hero-banner {
+    background: linear-gradient(rgba(15, 76, 129, 0.82), rgba(15, 76, 129, 0.88)), url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 60px 20px 50px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  .hero-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+
+  .hero-banner p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+  }
+
+  .hero-tags {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero-tag {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  /* Main Container */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Budget Summary Card */
+  .summary-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-left: 6px solid var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .summary-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .summary-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+  }
+
+  /* Day Cards */
+  .day-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border-color);
+  }
+
+  .day-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+  }
+
+  .day-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .day-badge {
+    background: var(--accent-color);
+    color: white;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+
+  .day-date {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .day-content {
+    padding: 24px;
+  }
+
+  /* Image Gallery Grid */
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .gallery-item {
+    position: relative;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #e2e8f0;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .section-block {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .section-text {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    white-space: pre-line;
+    padding-left: 26px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color);
+  }
+
+  .info-item {
+    background: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .info-item i {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+  }
+
+  .info-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: block;
+  }
+
+  .info-val {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px 10px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero-banner">
+    <h1><i class="fa-solid fa-water"></i> 印尼哥倫打洛海洋潛水之旅 8天7夜</h1>
+    <p>鯨鯊共游 ‧ 達利海綿 ‧ 廣角大觀 ‧ 泥地微距潛水探險</p>
+    <div class="hero-tags">
+      <span class="hero-tag"><i class="fa-solid fa-calendar-days"></i> 2027/04/17 - 04/24</span>
+      <span class="hero-tag"><i class="fa-solid fa-water-ladder"></i> Gorontalo 渡假村潛水</span>
+      <span class="hero-tag"><i class="fa-solid fa-camera"></i> 水下攝影探索</span>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="summary-card">
+      <div>
+        <div class="summary-title"><i class="fa-solid fa-route"></i> 行程概覽與潛水重點</div>
+        <div style="font-size:0.85rem; color:var(--text-muted);">包含鯨鯊季追尋、達利海綿地形與夜潛體驗</div>
+      </div>
+      <div class="summary-price">Gorontalo, Indonesia</div>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Day 1 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 1</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-04-17 (六)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="航班出發">
+              <div class="gallery-caption">TPE-DPS 班機出發</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="飯店休閒環境">
+              <div class="gallery-caption">FM7 Resort Hotel 入住休息</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-plane-departure"></i> 每日行程重點</div>
+            <div class="section-text">
+TPE-DPS CI 761 0905-1335 T1
+早上搭機飛抵雅加達，先帶大家至Mall/超市逛逛
+逛完後至 FM7 Resort Hotel Jakarta Airport 入住休息
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">FM7 Resort Hotel Jakarta Airport</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：自理 | 午：飛機餐 | 晚：Mall</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 2</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-04-18 (日)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="水下探索">
+              <div class="gallery-caption">Check Dive 水下檢查潛水</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="渡假村景色">
+              <div class="gallery-caption">Oceana Dive Resort 渡假村</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-person-swimming"></i> 每日行程重點</div>
+            <div class="section-text">
+CGK-GTO ID 6242 0355-0800
+0200早早起床搭機，飛抵哥倫打洛 Gorontalo
+Oceana Dive Resort 是當地的大型渡假村，有當地較好的住宿及餐廳
+早餐並整理裝備之後，先補眠，下午 check dive 1支
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">Oceana Dive Resort</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：住宿午餐 | 晚：渡假村</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 3</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-04-19 (一)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1560275619-4662e36fa65c?auto=format&fit=crop&w=600&q=80" alt="鯨鯊共游">
+              <div class="gallery-caption">哥倫打洛鯨鯊共游</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714?auto=format&fit=crop&w=600&q=80" alt="廣角潛水">
+              <div class="gallery-caption">廣角地形潛水</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-fish-fins"></i> 每日行程重點</div>
+            <div class="section-text">
+早上看鯨鯊，在12-4月的鯨鯊季，鯨鯊會被當地的魚蝦工廠廚餘所吸引
+廣角潛水 3支
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">Oceana Dive Resort</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：住宿午餐 | 晚：渡假村</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 4 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 4</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-04-20 (二)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" alt="微距生物">
+              <div class="gallery-caption">Muck Diving 泥地微距觀察</div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="夜潛冒險">
+              <div class="gallery-caption">Night Dive 夜潛探險</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-camera"></i> 每日行程重點</div>
+            <div class="section-text">
+微距潛水 2支 + 1支夜潛，這裡除了有廣角之外，也有 muck diving
+早上潛完中午去外面餐廳吃看看，下午回來休息後晚上夜潛
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">Oceana Dive Resort</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：Mas Joko 99 Restaurant | 晚：渡假村</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 5 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 5</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-04-21 (三)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="達利海綿">
+              <div class="gallery-caption">Salvador Dali Sponge 達利海綿</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-water"></i> 每日行程重點</div>
+            <div class="section-text">
+廣角潛水 3支
+Salvador Dali Sponge 是此地名產，扭曲的表皮宛如達利的超現實主義畫作
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">Oceana Dive Resort</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：住宿午餐 | 晚：Ohara Restaurant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 6 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 6</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-04-22 (四)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="微距攝影">
+              <div class="gallery-caption">微距海洋生物攝影</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-bug"></i> 每日行程重點</div>
+            <div class="section-text">
+微距潛水 3支
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">Oceana Dive Resort</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：住宿午餐 | 晚：渡假村</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 7 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 7</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-04-23 (五)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714?auto=format&fit=crop&w=600&q=80" alt="末程潛水">
+              <div class="gallery-caption">告別潛水巡禮</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-water-ladder"></i> 每日行程重點</div>
+            <div class="section-text">
+廣角或微距潛水 2支
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-hotel"></i>
+              <div>
+                <span class="info-label">預定住宿</span>
+                <span class="info-val">Oceana Dive Resort</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿早餐 | 午：住宿午餐 | 晚：渡假村</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 8 -->
+      <div class="day-card">
+        <div class="day-header">
+          <span class="day-badge">Day 8</span>
+          <span class="day-date"><i class="fa-regular fa-calendar"></i> 2027-04-24 (六)</span>
+        </div>
+        <div class="day-content">
+          <div class="image-gallery">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=600&q=80" alt="返航">
+              <div class="gallery-caption">搭機返航 圓滿結束旅程</div>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="section-title"><i class="fa-solid fa-plane-arrival"></i> 每日行程重點</div>
+            <div class="section-text">
+GTO-CGK ID 6243 0840-0930
+DPS-TPE CI 762 1440-2105
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <span class="info-label">餐食安排</span>
+                <span class="info-val">早：住宿含早餐 | 午：機場自理 | 晚：飛機餐</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <p>印尼哥倫打洛海洋潛水之旅 ‧ Itinerary Created with Care</p>
+  </footer>
+
+</body>
+</html>
