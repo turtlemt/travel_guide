@@ -2,13 +2,15 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>孫燕姿《遇見》- 五線譜與簡譜對照版</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孫燕姿 - 《遇見》（排笛單音）</title>
     <!-- 匯入 abcjs CDN -->
     <script src="https://cdn.jsdelivr.net/npm/abcjs@6.2.2/dist/abcjs-basic-min.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: #f4f6f9;
+            margin: 0;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -16,60 +18,64 @@
         }
         #score-container {
             background-color: #ffffff;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 850px;
             width: 100%;
+            box-sizing: border-box;
         }
-        /* 調整簡譜數字的樣式，使其更清晰 */
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+        }
+        /* 簡譜數字樣式設定 */
         .abcjs-lyric {
             font-size: 16px !important;
             font-weight: bold;
-            fill: #d9534f !important; /* 紅色代表數字簡譜 */
+            fill: #d9534f !important; /* 紅色字體代表簡譜對照 */
         }
     </style>
 </head>
 <body>
 
-    <h2>孫燕姿 - 《遇見》（排笛單音）</h2>
-    <p>上軌：五線譜（音高與節奏） | 下軌：簡譜對照數字</p>
+    <div id="score-container">
+        <h2>孫燕姿 - 《遇見》（排笛單音）</h2>
+        <p>上軌：五線譜（音高與節奏） | 下軌：紅色數字簡譜對照</p>
 
-    <!-- 樂譜渲染容器 -->
-    <div id="paper"></div>
+        <!-- 樂譜渲染容器 -->
+        <div id="paper"></div>
+    </div>
 
     <script>
-        // ABC Notation 語法
-        // 音符：E, F, G, A, B, c, d, e (c 代表高音 C)
-        // w: 代表對應在音符下方的文字/簡譜數字
-        const abcString = `
-X: 1
-T: 遇見
-C: 孫燕姿 (排笛/單音譜)
-M: 4/4
-L: 1/8
-Q: 1/4=72
-K: C
-%%score V1
-V: V1 clef=treble
-
-% ---- 前奏 ----
+        // 確保 DOM 載入後執行
+        document.addEventListener("DOMContentLoaded", function() {
+            // ABC 語法：已移除會造成解析失敗的註解符號 %
+            const abcString = `X:1
+T:遇見
+C:孫燕姿 (排笛/單音譜)
+M:4/4
+L:1/8
+Q:1/4=72
+K:C
 | E2 F2 G2 c2 | G2 F2 E2 G,2 | E2 F2 G2 c2 | G2 F2 E4 |
 w: 3 4 5 1* | 5 4 3 5. | 3 4 5 1* | 5 4 3 - |
-
-% ---- 主歌 A ----
 | E2 E2 E4 | E2 F2 G2 C2 | C2 C2 B,2 C2 | D2 C2 B,2 A,2 | B,8 |
 w: 3 3 3 - | 3 4 5 1 | 1 1 7. 1 | 2 1 7. 6. | 7. - - - |
-
-% ---- 副歌 ----
-| G2 E2 D2 C2 | C2 D2 E2 F2 E2 D2 | G2 E2 D2 C2 | C2 D2 E2 F2 E2 D2 |
-w: 5 3 2 1 | 1 2 3 4 3 2 | 5 3 2 1 | 1 2 3 4 3 2 |
+| G2 E2 D2 C2 | C2 D2 E2 F2 | E2 D2 G2 E2 | D2 C2 C2 D2 | E2 F2 E2 D2 |
+w: 5 3 2 1 | 1 2 3 4 | 3 2 5 3 | 2 1 1 2 | 3 4 3 2 |
 `;
 
-        // 使用 abcjs 將語法渲染成 SVG 樂譜
-        ABCJS.renderAbc("paper", abcString, {
-            responsive: "resize",
-            scale: 1.2
+            // 渲染樂譜
+            ABCJS.renderAbc("paper", abcString, {
+                responsive: "resize",
+                scale: 1.1,
+                add_classes: true
+            });
         });
     </script>
 </body>
