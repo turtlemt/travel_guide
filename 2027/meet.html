@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>孫燕姿 - 《遇見》（排笛單音）</title>
+    <title>孫燕姿 - 《遇見》排笛全曲單音譜</title>
     <!-- 匯入 abcjs CDN -->
     <script src="https://cdn.jsdelivr.net/npm/abcjs@6.2.2/dist/abcjs-basic-min.js"></script>
     <style>
@@ -18,62 +18,97 @@
         }
         #score-container {
             background-color: #ffffff;
-            padding: 25px;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            max-width: 850px;
+            max-width: 900px;
             width: 100%;
             box-sizing: border-box;
         }
         h2 {
             margin-top: 0;
-            color: #333;
+            color: #2c3e50;
+            text-align: center;
         }
-        p {
-            color: #666;
+        p.subtitle {
+            color: #7f8c8d;
             font-size: 14px;
+            text-align: center;
+            margin-bottom: 25px;
         }
-        /* 簡譜數字樣式設定 */
-        .abcjs-lyric {
-            font-size: 16px !important;
+        /* 第一層：簡譜數字（紅色加粗） */
+        .abcjs-lyric:nth-of-type(2n+1) {
+            font-size: 15px !important;
             font-weight: bold;
-            fill: #d9534f !important; /* 紅色字體代表簡譜對照 */
+            fill: #e74c3c !important;
+        }
+        /* 第二層：中文歌詞（深灰色） */
+        .abcjs-lyric:nth-of-type(2n) {
+            font-size: 14px !important;
+            font-weight: 500;
+            fill: #2c3e50 !important;
         }
     </style>
 </head>
 <body>
 
     <div id="score-container">
-        <h2>孫燕姿 - 《遇見》（排笛單音）</h2>
-        <p>上軌：五線譜（音高與節奏） | 下軌：紅色數字簡譜對照</p>
+        <h2>孫燕姿 - 《遇見》完整排笛單音譜</h2>
+        <p class="subtitle">五線譜 + 紅色數字簡譜 + 中文歌詞全曲對照版</p>
 
         <!-- 樂譜渲染容器 -->
         <div id="paper"></div>
     </div>
 
     <script>
-        // 確保 DOM 載入後執行
         document.addEventListener("DOMContentLoaded", function() {
-            // ABC 語法：已移除會造成解析失敗的註解符號 %
+            // ABC 語法：含前奏、主歌A/B、副歌1/2完整段落
             const abcString = `X:1
 T:遇見
-C:孫燕姿 (排笛/單音譜)
+C:孫燕姿 (排笛 C 調單音譜)
 M:4/4
 L:1/8
 Q:1/4=72
 K:C
-| E2 F2 G2 c2 | G2 F2 E2 G,2 | E2 F2 G2 c2 | G2 F2 E4 |
-w: 3 4 5 1* | 5 4 3 5. | 3 4 5 1* | 5 4 3 - |
+| C2 D2 E2 G2 | E2 D2 C2 G,2 | C2 D2 E2 G2 | E2 D2 C4 |
+w: 1 2 3 5 | 3 2 1 5. | 1 2 3 5 | 3 2 1 - |
+w: (前 - - 奏) | - - - - | - - - - | - - - - |
+| C2 D2 E2 G2 | A2 G2 E2 D2 | C2 D2 E2 D2 | C8 |
+w: 1 2 3 5 | 6 5 3 2 | 1 2 3 2 | 1 - - - |
+w: - - - - | - - - - | - - - - | - - - - |
 | E2 E2 E4 | E2 F2 G2 C2 | C2 C2 B,2 C2 | D2 C2 B,2 A,2 | B,8 |
 w: 3 3 3 - | 3 4 5 1 | 1 1 7. 1 | 2 1 7. 6. | 7. - - - |
+w: 聽 見 冬 | 天 的 離 開 | 我 在 某 年 | 某 月 醒 過 | 來 - - - |
+| E2 E2 E4 | E2 F2 G2 C2 | C2 C2 B,2 C2 | D2 C2 B,2 C2 | D8 |
+w: 3 3 3 - | 3 4 5 1 | 1 1 7. 1 | 2 1 7. 1 | 2 - - - |
+w: 我 想 我 | 等 我 期 待 | 未 來 我 多 | 久 才 能 明 | 白 - - - |
+| E2 E2 E4 | E2 F2 G2 C2 | C2 C2 B,2 C2 | D2 C2 B,2 A,2 | B,8 |
+w: 3 3 3 - | 3 4 5 1 | 1 1 7. 1 | 2 1 7. 6. | 7. - - - |
+w: 陰 天 傍 | 晚 車 窗 外 | 未 來 有 一 | 個 人 在 等 | 待 - - - |
+| E2 E2 E4 | E2 F2 G2 C2 | C2 C2 B,2 C2 | D2 C2 B,2 B,2 | C8 |
+w: 3 3 3 - | 3 4 5 1 | 1 1 7. 1 | 2 1 7. 7. | 1 - - - |
+w: 向 左 向 | 右 向 前 看 | 愛 要 拐 幾 | 個 彎 才 來 | - - - - |
 | G2 E2 D2 C2 | C2 D2 E2 F2 | E2 D2 G2 E2 | D2 C2 C2 D2 | E2 F2 E2 D2 |
 w: 5 3 2 1 | 1 2 3 4 | 3 2 5 3 | 2 1 1 2 | 3 4 3 2 |
+w: 我 遇 見 誰 | 會 有 怎 樣 | 的 對 白 我 | 等 的 人 他 | 在 多 遠 的 |
+| G2 E2 D2 C2 | C2 D2 E2 F2 | E2 D2 C2 D2 | E2 C2 B,2 C2 | D2 E2 D2 C2 | C8 |
+w: 5 3 2 1 | 1 2 3 4 | 3 2 1 2 | 3 1 7. 1 | 2 3 2 1 | 1 - - - |
+w: 未 來 我 聽 | 見 風 來 自 | 地 鐵 和 人 | 海 我 排 著 | 隊 拿 著 命 | 運 的 籤 牌 |
+| G2 E2 D2 C2 | C2 D2 E2 F2 | E2 D2 G2 E2 | D2 C2 C2 D2 | E2 F2 E2 D2 |
+w: 5 3 2 1 | 1 2 3 4 | 3 2 5 3 | 2 1 1 2 | 3 4 3 2 |
+w: 我 往 前 飛 | 飛 過 一 片 | 時 間 海 我 | 們 也 曾 在 | 愛 情 裡 受 |
+| G2 E2 D2 C2 | C2 D2 E2 F2 | E2 D2 C2 D2 | E2 C2 B,2 C2 | D2 E2 E2 F2 | G2 G2 A2 G2 | E2 D2 C4 |
+w: 5 3 2 1 | 1 2 3 4 | 3 2 1 2 | 3 1 7. 1 | 2 3 3 4 | 5 5 6 5 | 3 2 1 - |
+w: 傷 害 我 看 | 著 路 夢 的 | 入 口 有 點 | 窄 我 總 有 | 一 天 會 離 | 開 你 身 邊 | 做 著 夢 |
+| C2 D2 E2 G2 | E2 D2 C4 |
+w: 1 2 3 5 | 3 2 1 - |
+w: (尾 - - 奏) | - - - - |
 `;
 
             // 渲染樂譜
             ABCJS.renderAbc("paper", abcString, {
                 responsive: "resize",
-                scale: 1.1,
+                scale: 1.05,
                 add_classes: true
             });
         });
