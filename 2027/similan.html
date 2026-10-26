@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斯米蘭群島（Similan Islands）潛水船宿比較</title>
+    <style>
+        :root {
+            --primary-color: #0284c7;
+            --secondary-color: #0ea5e9;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+        
+        /* 船隻介紹區塊 */
+        .ships-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+        .ship-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+        .ship-card:hover {
+            transform: translateY(-5px);
+        }
+        .ship-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+        }
+        .ship-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .ship-specs {
+            background: #f1f5f9;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+        }
+        .ship-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .ship-body p {
+            margin: 0 0 15px 0;
+            color: var(--text-main);
+        }
+
+        /* 表格區塊 */
+        .table-container {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+            padding: 20px;
+        }
+        h2.section-title {
+            color: var(--text-main);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background-color: #f8fafc;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+        .price-tag {
+            font-weight: bold;
+            color: #0284c7;
+            white-space: pre-line;
+        }
+        .pros {
+            color: #16a34a;
+        }
+        .cons {
+            color: #dc2626;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>斯米蘭群島（Similan Islands）潛水船宿比較</h1>
+    <p class="subtitle">精選泰國斯米蘭頂級與高CP值船宿方案比較與船隻介紹</p>
+
+    <!-- 上半部：三艘船隻詳細介紹 -->
+    <div class="ships-section">
+        <!-- 船隻 1 -->
+        <div class="ship-card">
+            <div class="ship-header">
+                <h2>Tapana Catamaran</h2>
+            </div>
+            <div class="ship-specs">
+                <span>雙胴船型 / 頂級豪華</span>
+                <span>搭載客數：約 20-24 位</span>
+            </div>
+            <div class="ship-body">
+                <p><strong>特色概述：</strong>主打極致舒適的雙胴船（Catamaran），航行平穩、空間寬敞。房間裝潢高級，餐飲水準極高，並特別強調床鋪非常舒適，適合追求頂級住宿體驗的潛水員。</p>
+                <p><strong>規格亮點：</strong>長度與空間配置優於傳統單體船，提供高品質的私人衛浴與現代化設施，是斯米蘭船宿中的奢華之選。</p>
+            </div>
+        </div>
+
+        <!-- 船隻 2 -->
+        <div class="ship-card">
+            <div class="ship-header">
+                <h2>Aqua Liveaboard</h2>
+            </div>
+            <div class="ship-specs">
+                <span>單體大船 / 高CP值</span>
+                <span>搭載客數：約 20-26 位</span>
+            </div>
+            <div class="ship-body">
+                <p><strong>特色概述：</strong>在潛水員社群中享有極佳口碑的高 CP 值船隻。餐點選擇豐富且美味，房間空間適中並設有大型景觀窗，視野良好。額外提供汽水免費暢飲，深受好評。</p>
+                <p><strong>規格亮點：</strong>動線流暢、公共區域與潛水甲板規劃完善，雖然客廳裝潢風格較為傳統老派，但整體綜合表現與價格極具競爭力。</p>
+            </div>
+        </div>
+
+        <!-- 船隻 3 -->
+        <div class="ship-card">
+            <div class="ship-header">
+                <h2>Krishna 3 Liveaboard</h2>
+            </div>
+            <div class="ship-specs">
+                <span>現代新船 / 經濟實惠</span>
+                <span>搭載客數：約 16-20 位（較小）</span>
+            </div>
+            <div class="ship-body">
+                <p><strong>特色概述：</strong>下水僅一年多的新穎船隻，整體設備新穎乾淨。餐點偏向開胃的泰式風味，是預算有限但又想體驗新船的好選擇。</p>
+                <p><strong>規格亮點：</strong>因船體尺寸相對較小，房間與公共活動區域較為精簡。行程安排具特色，潛水結束後會多停留一晚隔天才下船。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 下半部：詳細比較表格 -->
+    <div class="table-container">
+        <h2 class="section-title">船宿規格與方案總表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>船宿名稱</th>
+                    <th>天數</th>
+                    <th>潛水支數</th>
+                    <th>特色優勢</th>
+                    <th>缺點與注意事項</th>
+                    <th>房型與價格 (THB)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Tapana Catamaran</strong></td>
+                    <td>5D4N</td>
+                    <td>15 支</td>
+                    <td class="pros">房間高級，餐飲精緻，主打床很好睡，航行平穩舒適。</td>
+                    <td class="cons">價格相對高昂；2027 下半年尚未全面開放預訂。</td>
+                    <td class="price-tag">雙床房: 60,000
+一大床: 65,000
+VIP: 70,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Aqua Liveaboard</strong></td>
+                    <td>5D4N</td>
+                    <td>14 支</td>
+                    <td class="pros">餐點多樣美味，房間窗戶大採光好，汽水免費，整體 CP 值極高。</td>
+                    <td class="cons">主沙發客廳區視覺風格較為老派。</td>
+                    <td class="price-tag">雙床低甲板: 50,000
+雙床上層甲板: 53,000
+一大床: 56,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Krishna 3 Liveaboard</strong></td>
+                    <td>6D5N</td>
+                    <td>15 支</td>
+                    <td class="pros">餐點偏道地泰式，船齡僅約 1 年多非常新，是較為經濟實惠的選擇。</td>
+                    <td class="cons">船體較小，房間與公共區域空間有限；潛完水後需隔天才下船。</td>
+                    <td class="price-tag">主甲板雙床: 48,000
+主甲板一大床: 51,000
+上層甲板兩小床: 51,000
+上層甲板一大床: 55,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
